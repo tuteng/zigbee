@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\TransmitApp.ewp</path>
+  </project>
+  <batchBuild>
+    <batchDefinition>
+      <name>Build All</name>
+      <member>
+        <project>TransmitApp</project>
+        <configuration>CoordinatorEB</configuration>
+      </member>
+      <member>
+        <project>TransmitApp</project>
+        <configuration>RouterEB</configuration>
+      </member>
+      <member>
+        <project>TransmitApp</project>
+        <configuration>EndDeviceEB</configuration>
+      </member>
+      <member>
+        <project>TransmitApp</project>
+        <configuration>CoordinatorEB-Pro</configuration>
+      </member>
+      <member>
+        <project>TransmitApp</project>
+        <configuration>RouterEB-Pro</configuration>
+      </member>
+      <member>
+        <project>TransmitApp</project>
+        <configuration>EndDeviceEB-Pro</configuration>
+      </member>
+    </batchDefinition>
+  </batchBuild>
+</workspace>
+
+

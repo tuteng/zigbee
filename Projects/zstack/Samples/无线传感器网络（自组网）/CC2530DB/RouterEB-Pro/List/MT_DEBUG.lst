@@ -1,0 +1,665 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V7.60.1.40026 for 8051             17/Feb/2013  12:16:42 #
+# Copyright (C) 2004-2010 IAR Systems AB.                                     #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Documents and Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ #
+#                          ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ»ÍøÂç¹ÜÀí\Components\mt\MT_DEBUG. #
+#                          c                                                  #
+#    Command line       =  -f "C:\Documents and Settings\XPMUser\×ÀÃæ\CC2530À #
+#                          ý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ»ÍøÂç¹ÜÀí\Projects\zstack\Sam #
+#                          ples\SampleApp ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\. #
+#                          .\..\Tools\CC2530DB\f8wRouter.cfg" (-DCPU32MHZ     #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DRTR_NWK -DBLINK_LEDS) -f "C:\Documents and     #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\..\..\Tools\CC25 #
+#                          30DB\f8wConfig.cfg" (-DSECURE=0                    #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFF0                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          "C:\Documents and Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì #
+#                          \ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ»ÍøÂç¹ÜÀí\Components\mt\MT_DEBUG #
+#                          .c" -D ZIGBEEPRO -D ZTOOL_P1 -D NWK_AUTO_POLL -D   #
+#                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D           #
+#                          LCD_SUPPORTED=DEBUG -lC "C:\Documents and          #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\RouterEB-Pro\List\" #
+#                           -lA "C:\Documents and Settings\XPMUser\×ÀÃæ\CC253 #
+#                          0Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ»ÍøÂç¹ÜÀí\Projects\zstack\S #
+#                          amples\SampleApp ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\Ro #
+#                          uterEB-Pro\List\" --diag_suppress Pe001,Pa010 -o   #
+#                          "C:\Documents and Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì #
+#                          \ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ»ÍøÂç¹ÜÀí\Projects\zstack\Sample #
+#                          s\SampleApp ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\RouterE #
+#                          B-Pro\Obj\" -e --require_prototypes --debug        #
+#                          --core=plain --dptr=16,1 --data_model=large        #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I "C:\Documents and          #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\" -I "C:\Documents  #
+#                          and Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð #
+#                          ­ÒéÕ»ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp    #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\SOURCE\" -I      #
+#                          "C:\Documents and Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì #
+#                          \ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ»ÍøÂç¹ÜÀí\Projects\zstack\Sample #
+#                          s\SampleApp ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\..\. #
+#                          .\ZMAIN\TI2530DB\" -I "C:\Documents and            #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\MT\" -I "C:\Documents and                   #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\HAL\INCLUDE\" -I "C:\Documents and          #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\HAL\TARGET\CC2530EB\" -I "C:\Documents and  #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\OSAL\MCU\CCSOC\" -I "C:\Documents and       #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\OSAL\INCLUDE\" -I "C:\Documents and         #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\STACK\AF\" -I "C:\Documents and             #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\STACK\NWK\" -I "C:\Documents and            #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\STACK\SEC\" -I "C:\Documents and            #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\STACK\SAPI\" -I "C:\Documents and           #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\STACK\SYS\" -I "C:\Documents and            #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\STACK\ZDO\" -I "C:\Documents and            #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\ZMAC\F8W\" -I "C:\Documents and             #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\ZMAC\" -I "C:\Documents and                 #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\SERVICES\SADDR\" -I "C:\Documents and       #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\SERVICES\SDATA\" -I "C:\Documents and       #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\MAC\INCLUDE\" -I "C:\Documents and          #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\MAC\HIGH_LEVEL\" -I "C:\Documents and       #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\MAC\LOW_LEVEL\srf04\" -I "C:\Documents and  #
+#                          Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ #
+#                          »ÍøÂç¹ÜÀí\Projects\zstack\Samples\SampleApp        #
+#                          ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\" -I        #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench   #
+#                          5.4\8051\INC\" -I "C:\Program Files\IAR            #
+#                          Systems\Embedded Workbench 5.4\8051\INC\CLIB\"     #
+#                          -Ohz                                               #
+#    List file          =  C:\Documents and Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ #
+#                          ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ»ÍøÂç¹ÜÀí\Projects\zstack\Samples #
+#                          \SampleApp ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\RouterEB #
+#                          -Pro\List\MT_DEBUG.lst                             #
+#    Object file        =  C:\Documents and Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ #
+#                          ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ»ÍøÂç¹ÜÀí\Projects\zstack\Samples #
+#                          \SampleApp ÍøÂç¹ÜÀí-µã²¥·½Ê½·¢ËÍ\CC2530DB\RouterEB #
+#                          -Pro\Obj\MT_DEBUG.r51                              #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Documents and Settings\XPMUser\×ÀÃæ\CC2530Àý³Ì\ÏîÄ¿Êµ¼ù\13.Ð­ÒéÕ»ÍøÂç¹ÜÀí\Components\mt\MT_DEBUG.c
+      1          /***************************************************************************************************
+      2            Filename:       MT.c
+      3            Revised:        $Date: 2008-02-12 16:28:45 -0800 (Tue, 12 Feb 2008) $
+      4            Revision:       $Revision: 16392 $
+      5          
+      6            Description:
+      7          
+      8            Copyright 2007 Texas Instruments Incorporated. All rights reserved.
+      9          
+     10            IMPORTANT: Your use of this Software is limited to those specific rights
+     11            granted under the terms of a software license agreement between the user
+     12            who downloaded the software, his/her employer (which must be your employer)
+     13            and Texas Instruments Incorporated (the "License").  You may not use this
+     14            Software unless you agree to abide by the terms of the License. The License
+     15            limits your use, and you acknowledge, that the Software may not be modified,
+     16            copied or distributed unless embedded on a Texas Instruments microcontroller
+     17            or used solely and exclusively in conjunction with a Texas Instruments radio
+     18            frequency transceiver, which is integrated into your product.  Other than for
+     19            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     20            works of, modify, distribute, perform, display or sell this Software and/or
+     21            its documentation for any purpose.
+     22          
+     23            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     24            PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     25            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     26            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     27            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     28            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     29            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     30            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     31            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     32            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     33            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     34          
+     35            Should you have any questions regarding your right to use this Software,
+     36            contact Texas Instruments Incorporated at www.TI.com.
+     37          
+     38           ***************************************************************************************************/
+     39          
+     40          /***************************************************************************************************
+     41           * INCLUDES
+     42           ***************************************************************************************************/
+     43          #include "ZComDef.h"
+     44          #include "MT.h"
+     45          #include "MT_DEBUG.h"
+     46          #include "MT_UART.h"
+     47          
+     48          /***************************************************************************************************
+     49           * LOCAL FUNCTIONs
+     50           ***************************************************************************************************/
+     51          #if defined (MT_DEBUG_FUNC)
+     52          void MT_DebugSetThreshold(uint8 *pBuf);
+     53          #endif
+     54          
+     55          #if defined (MT_DEBUG_FUNC)
+     56          /***************************************************************************************************
+     57           * @fn      MT_DebugProcessing
+     58           *
+     59           * @brief   Process all the DEBUG commands that are issued by test tool
+     60           *
+     61           * @param   pBuf - pointer to received buffer
+     62           *
+     63           * @return  status
+     64           ***************************************************************************************************/
+     65          uint8 MT_DebugCommandProcessing(uint8 *pBuf)
+     66          {
+     67            uint8 status = MT_RPC_SUCCESS;
+     68          
+     69            switch (pBuf[MT_RPC_POS_CMD1])
+     70            {
+     71              case MT_DEBUG_SET_THRESHOLD:
+     72                MT_DebugSetThreshold(pBuf);
+     73                break;
+     74          
+     75              default:
+     76                status = MT_RPC_ERR_COMMAND_ID;
+     77                break;
+     78            }
+     79          
+     80            return status;
+     81          }
+     82          
+     83          /***************************************************************************************************
+     84           * @fn      MT_DebugSetThreshold
+     85           *
+     86           * @brief   Process Debug Set Threshold
+     87           *
+     88           * @param   pBuf - pointer to received buffer
+     89           *
+     90           * @return  void
+     91           ***************************************************************************************************/
+     92          void MT_DebugSetThreshold(uint8 *pBuf)
+     93          {
+     94            uint8 retValue = ZSuccess;
+     95            uint8 cmdId;
+     96          
+     97            /* parse header */
+     98            cmdId = pBuf[MT_RPC_POS_CMD1];
+     99            pBuf += MT_RPC_FRAME_HDR_SZ;
+    100          
+    101            /* Populate info */
+    102            debugCompId = *pBuf++;
+    103            debugThreshold = *pBuf++;
+    104          
+    105            /* Build and send back the response */
+    106            MT_BuildAndSendZToolResponse(((uint8)MT_RPC_CMD_SRSP | (uint8)MT_RPC_SYS_DBG), cmdId, 1, &retValue);
+    107          }
+    108          #endif /* MT_DEBUG_FUNC */
+    109          
+    110          /***************************************************************************************************
+    111           * @fn      MT_ProcessDebugMsg
+    112           *
+    113           * @brief   Build and send a debug message.
+    114           *
+    115           * @param   byte *data - pointer to the data portion of the debug message
+    116           *
+    117           * @return  void
+    118           ***************************************************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    119          void MT_ProcessDebugMsg( mtDebugMsg_t *msg )
+   \                     MT_ProcessDebugMsg:
+    120          {
+   \   000000   74F0         MOV     A,#-0x10
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 16
+   \   000005                ; Auto size: 11
+   \   000005   74F5         MOV     A,#-0xb
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+   \   00000A   EA           MOV     A,R2
+   \   00000B   FE           MOV     R6,A
+   \   00000C   EB           MOV     A,R3
+   \   00000D   FF           MOV     R7,A
+    121            byte *msg_ptr;
+    122            byte dataLen;
+    123            uint8 buf[11];
+    124            uint8 *pBuf;
+    125          
+    126            /* Calculate the data length based */
+    127            dataLen = 5 + (msg->numParams * sizeof ( uint16 ));
+   \   00000E   EE           MOV     A,R6
+   \   00000F   2404         ADD     A,#0x4
+   \   000011   F5..         MOV     ?V0 + 4,A
+   \   000013   EF           MOV     A,R7
+   \   000014   3400         ADDC    A,#0x0
+   \   000016   F5..         MOV     ?V0 + 5,A
+   \   000018   85..82       MOV     DPL,?V0 + 4
+   \   00001B   F583         MOV     DPH,A
+   \   00001D   E0           MOVX    A,@DPTR
+   \   00001E   C3           CLR     C
+   \   00001F   33           RLC     A
+   \   000020   2405         ADD     A,#0x5
+   \   000022   F5..         MOV     ?V0 + 0,A
+    128          
+    129            /* Get a message buffer to build the debug message */
+    130            msg_ptr = osal_msg_allocate( (byte)(SPI_0DATA_MSG_LEN + dataLen + 1) );
+   \   000024                ; Setup parameters for call to function osal_msg_allocate
+   \   000024   7406         MOV     A,#0x6
+   \   000026   25..         ADD     A,?V0 + 0
+   \   000028   FA           MOV     R2,A
+   \   000029   7B00         MOV     R3,#0x0
+   \   00002B   12....       LCALL   ??osal_msg_allocate?relay
+   \   00002E   8A..         MOV     ?V0 + 2,R2
+   \   000030   8B..         MOV     ?V0 + 3,R3
+    131            if ( msg_ptr )
+   \   000032   EA           MOV     A,R2
+   \   000033   7001         JNZ     ??MT_ProcessDebugMsg_0
+   \   000035   EB           MOV     A,R3
+   \                     ??MT_ProcessDebugMsg_0:
+   \   000036   7003         JNZ     $+5
+   \   000038   02....       LJMP    ??MT_ProcessDebugMsg_1 & 0xFFFF
+    132            {
+    133              /* Build the message */
+    134              pBuf = buf;
+    135              *pBuf++ = msg->compID;
+   \   00003B   8E82         MOV     DPL,R6
+   \   00003D   8F83         MOV     DPH,R7
+   \   00003F   A3           INC     DPTR
+   \   000040   A3           INC     DPTR
+   \   000041   E0           MOVX    A,@DPTR
+   \   000042   85..82       MOV     DPL,?XSP + 0
+   \   000045   85..83       MOV     DPH,?XSP + 1
+   \   000048   F0           MOVX    @DPTR,A
+    136              *pBuf++ = msg->severity;
+   \   000049   8E82         MOV     DPL,R6
+   \   00004B   8F83         MOV     DPH,R7
+   \   00004D   A3           INC     DPTR
+   \   00004E   A3           INC     DPTR
+   \   00004F   A3           INC     DPTR
+   \   000050   E0           MOVX    A,@DPTR
+   \   000051   C0E0         PUSH    A
+   \   000053   7401         MOV     A,#0x1
+   \   000055   12....       LCALL   ?XSTACK_DISP0_8
+   \   000058   D0E0         POP     A
+   \   00005A   F0           MOVX    @DPTR,A
+    137              *pBuf++ = msg->numParams;
+   \   00005B   85..82       MOV     DPL,?V0 + 4
+   \   00005E   85..83       MOV     DPH,?V0 + 5
+   \   000061   E0           MOVX    A,@DPTR
+   \   000062   C0E0         PUSH    A
+   \   000064   7402         MOV     A,#0x2
+   \   000066   12....       LCALL   ?XSTACK_DISP0_8
+   \   000069   D0E0         POP     A
+   \   00006B   F0           MOVX    @DPTR,A
+   \   00006C   7403         MOV     A,#0x3
+   \   00006E   12....       LCALL   ?XSTACK_DISP0_8
+   \   000071   A882         MOV     R0,DPL
+   \   000073   A983         MOV     R1,DPH
+    138          
+    139              if ( msg->numParams >= 1 )
+   \   000075   85..82       MOV     DPL,?V0 + 4
+   \   000078   85..83       MOV     DPH,?V0 + 5
+   \   00007B   E0           MOVX    A,@DPTR
+   \   00007C   6073         JZ      ??MT_ProcessDebugMsg_2
+    140              {
+    141                *pBuf++ = LO_UINT16( msg->param1 );
+   \   00007E   EE           MOV     A,R6
+   \   00007F   2405         ADD     A,#0x5
+   \   000081   12....       LCALL   ?Subroutine1 & 0xFFFF
+   \                     ??CrossCallReturnLabel_2:
+   \   000084   C0E0         PUSH    A
+   \   000086   7403         MOV     A,#0x3
+   \   000088   12....       LCALL   ?XSTACK_DISP0_8
+   \   00008B   D0E0         POP     A
+   \   00008D   F0           MOVX    @DPTR,A
+    142                *pBuf++ = HI_UINT16( msg->param1 );
+   \   00008E   8882         MOV     DPL,R0
+   \   000090   8983         MOV     DPH,R1
+   \   000092   A3           INC     DPTR
+   \   000093   E0           MOVX    A,@DPTR
+   \   000094   C0E0         PUSH    A
+   \   000096   7404         MOV     A,#0x4
+   \   000098   12....       LCALL   ?XSTACK_DISP0_8
+   \   00009B   D0E0         POP     A
+   \   00009D   F0           MOVX    @DPTR,A
+   \   00009E   7405         MOV     A,#0x5
+   \   0000A0   12....       LCALL   ?XSTACK_DISP0_8
+   \   0000A3   A882         MOV     R0,DPL
+   \   0000A5   A983         MOV     R1,DPH
+    143              }
+    144          
+    145              if ( msg->numParams >= 2 )
+   \   0000A7   85..82       MOV     DPL,?V0 + 4
+   \   0000AA   85..83       MOV     DPH,?V0 + 5
+   \   0000AD   E0           MOVX    A,@DPTR
+   \   0000AE   C3           CLR     C
+   \   0000AF   9402         SUBB    A,#0x2
+   \   0000B1   4029         JC      ??MT_ProcessDebugMsg_3
+    146              {
+    147                *pBuf++ = LO_UINT16( msg->param2 );
+   \   0000B3   EE           MOV     A,R6
+   \   0000B4   2407         ADD     A,#0x7
+   \   0000B6   12....       LCALL   ?Subroutine1 & 0xFFFF
+   \                     ??CrossCallReturnLabel_3:
+   \   0000B9   C0E0         PUSH    A
+   \   0000BB   7405         MOV     A,#0x5
+   \   0000BD   12....       LCALL   ?XSTACK_DISP0_8
+   \   0000C0   D0E0         POP     A
+   \   0000C2   F0           MOVX    @DPTR,A
+    148                *pBuf++ = HI_UINT16( msg->param2 );
+   \   0000C3   8882         MOV     DPL,R0
+   \   0000C5   8983         MOV     DPH,R1
+   \   0000C7   A3           INC     DPTR
+   \   0000C8   E0           MOVX    A,@DPTR
+   \   0000C9   C0E0         PUSH    A
+   \   0000CB   7406         MOV     A,#0x6
+   \   0000CD   12....       LCALL   ?XSTACK_DISP0_8
+   \   0000D0   D0E0         POP     A
+   \   0000D2   F0           MOVX    @DPTR,A
+   \   0000D3   7407         MOV     A,#0x7
+   \   0000D5   12....       LCALL   ?XSTACK_DISP0_8
+   \   0000D8   A882         MOV     R0,DPL
+   \   0000DA   A983         MOV     R1,DPH
+    149              }
+    150          
+    151              if ( msg->numParams == 3 )
+   \                     ??MT_ProcessDebugMsg_3:
+   \   0000DC   85..82       MOV     DPL,?V0 + 4
+   \   0000DF   85..83       MOV     DPH,?V0 + 5
+   \   0000E2   E0           MOVX    A,@DPTR
+   \   0000E3   6403         XRL     A,#0x3
+   \   0000E5   700A         JNZ     ??MT_ProcessDebugMsg_2
+    152              {
+    153                *pBuf++ = LO_UINT16( msg->param3 );
+   \   0000E7   EE           MOV     A,R6
+   \   0000E8   2409         ADD     A,#0x9
+   \   0000EA   12....       LCALL   ?Subroutine0 & 0xFFFF
+    154                *pBuf++ = HI_UINT16( msg->param3 );
+    155              }
+   \                     ??CrossCallReturnLabel_0:
+   \   0000ED   A3           INC     DPTR
+   \   0000EE   08           INC     R0
+   \   0000EF   A983         MOV     R1,DPH
+    156          
+    157              *pBuf++ = LO_UINT16( msg->timestamp );
+   \                     ??MT_ProcessDebugMsg_2:
+   \   0000F1   EE           MOV     A,R6
+   \   0000F2   240B         ADD     A,#0xb
+   \   0000F4   12....       LCALL   ?Subroutine0 & 0xFFFF
+    158              *pBuf++ = HI_UINT16( msg->timestamp );
+    159          
+    160          #ifdef MT_UART_DEFAULT_PORT
+    161              /* Debug message is set to AREQ CMD 0x80 for now */
+    162              /* Build and send back the response */
+    163              MT_BuildAndSendZToolResponse(((uint8)MT_RPC_CMD_AREQ | (uint8)MT_RPC_SYS_DBG), 0x80, dataLen, buf);
+   \                     ??CrossCallReturnLabel_1:
+   \   0000F7                ; Setup parameters for call to function MT_BuildAndSendZToolResponse
+   \   0000F7   85..82       MOV     DPL,?XSP + 0
+   \   0000FA   85..83       MOV     DPH,?XSP + 1
+   \   0000FD   AC82         MOV     R4,DPL
+   \   0000FF   AD83         MOV     R5,DPH
+   \   000101   AB..         MOV     R3,?V0 + 0
+   \   000103   7A80         MOV     R2,#-0x80
+   \   000105   7948         MOV     R1,#0x48
+   \   000107   12....       LCALL   ??MT_BuildAndSendZToolResponse?relay
+    164          #endif
+    165              osal_msg_deallocate( msg_ptr );
+   \   00010A                ; Setup parameters for call to function osal_msg_deallocate
+   \   00010A   AA..         MOV     R2,?V0 + 2
+   \   00010C   AB..         MOV     R3,?V0 + 3
+   \   00010E   12....       LCALL   ??osal_msg_deallocate?relay
+    166            }
+    167          }
+   \                     ??MT_ProcessDebugMsg_1:
+   \   000111   740B         MOV     A,#0xb
+   \   000113   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000116   7F08         MOV     R7,#0x8
+   \   000118   02....       LJMP    ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   F8           MOV     R0,A
+   \   000001   EF           MOV     A,R7
+   \   000002   3400         ADDC    A,#0x0
+   \   000004   F9           MOV     R1,A
+   \   000005   8882         MOV     DPL,R0
+   \   000007   8983         MOV     DPH,R1
+   \   000009   E0           MOVX    A,@DPTR
+   \   00000A   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   FA           MOV     R2,A
+   \   000001   EF           MOV     A,R7
+   \   000002   3400         ADDC    A,#0x0
+   \   000004   FB           MOV     R3,A
+   \   000005   8A82         MOV     DPL,R2
+   \   000007   8B83         MOV     DPH,R3
+   \   000009   E0           MOVX    A,@DPTR
+   \   00000A   8882         MOV     DPL,R0
+   \   00000C   8983         MOV     DPH,R1
+   \   00000E   F0           MOVX    @DPTR,A
+   \   00000F   A3           INC     DPTR
+   \   000010   A882         MOV     R0,DPL
+   \   000012   A983         MOV     R1,DPH
+   \   000014   8A82         MOV     DPL,R2
+   \   000016   8B83         MOV     DPH,R3
+   \   000018   A3           INC     DPTR
+   \   000019   E0           MOVX    A,@DPTR
+   \   00001A   8882         MOV     DPL,R0
+   \   00001C   8983         MOV     DPH,R1
+   \   00001E   F0           MOVX    @DPTR,A
+   \   00001F   22           RET
+    168          
+    169          /***************************************************************************************************
+    170           * @fn      MT_ProcessDebugStr
+    171           *
+    172           * @brief   Build and send a debug string.
+    173           *
+    174           * @param   byte *dstr - pointer to the data portion of the debug message
+    175           *
+    176           * @return  void
+    177           ***************************************************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    178          void MT_ProcessDebugStr(mtDebugStr_t *dstr)
+   \                     MT_ProcessDebugStr:
+    179          {
+   \   000000   74F2         MOV     A,#-0xe
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 14
+   \   000005                ; Auto size: 0
+   \   000005   8A..         MOV     ?V0 + 0,R2
+   \   000007   8B..         MOV     ?V0 + 1,R3
+    180            byte *msg_ptr;
+    181          
+    182            /* Get a message buffer to build the debug message */
+    183            msg_ptr = osal_mem_alloc( (byte)(SPI_0DATA_MSG_LEN + dstr->strLen) );
+   \   000009   EA           MOV     A,R2
+   \   00000A   2402         ADD     A,#0x2
+   \   00000C   F8           MOV     R0,A
+   \   00000D   EB           MOV     A,R3
+   \   00000E   3400         ADDC    A,#0x0
+   \   000010   F9           MOV     R1,A
+   \   000011   88..         MOV     ?V0 + 2,R0
+   \   000013   89..         MOV     ?V0 + 3,R1
+   \   000015                ; Setup parameters for call to function osal_mem_alloc
+   \   000015   8882         MOV     DPL,R0
+   \   000017   F583         MOV     DPH,A
+   \   000019   E0           MOVX    A,@DPTR
+   \   00001A   2405         ADD     A,#0x5
+   \   00001C   FA           MOV     R2,A
+   \   00001D   7B00         MOV     R3,#0x0
+   \   00001F   12....       LCALL   ??osal_mem_alloc?relay
+   \   000022   8A..         MOV     ?V0 + 4,R2
+   \   000024   8B..         MOV     ?V0 + 5,R3
+   \   000026   AE..         MOV     R6,?V0 + 4
+   \   000028   AF..         MOV     R7,?V0 + 5
+    184            if ( msg_ptr )
+   \   00002A   EE           MOV     A,R6
+   \   00002B   7001         JNZ     ??MT_ProcessDebugStr_0
+   \   00002D   EF           MOV     A,R7
+   \                     ??MT_ProcessDebugStr_0:
+   \   00002E   6024         JZ      ??MT_ProcessDebugStr_1
+    185            {
+    186          #ifdef MT_UART_DEFAULT_PORT
+    187              /* Debug message is set to AREQ CMD 0x80 for now */
+    188              /* Build and send back the response */
+    189              MT_BuildAndSendZToolResponse(((uint8)MT_RPC_CMD_AREQ | (uint8)MT_RPC_SYS_DBG), MT_DEBUG_MSG, dstr->strLen, dstr->pString);
+   \   000030                ; Setup parameters for call to function MT_BuildAndSendZToolResponse
+   \   000030   85..82       MOV     DPL,?V0 + 0
+   \   000033   85..83       MOV     DPH,?V0 + 1
+   \   000036   A3           INC     DPTR
+   \   000037   A3           INC     DPTR
+   \   000038   A3           INC     DPTR
+   \   000039   E0           MOVX    A,@DPTR
+   \   00003A   FC           MOV     R4,A
+   \   00003B   A3           INC     DPTR
+   \   00003C   E0           MOVX    A,@DPTR
+   \   00003D   FD           MOV     R5,A
+   \   00003E   85..82       MOV     DPL,?V0 + 2
+   \   000041   85..83       MOV     DPH,?V0 + 3
+   \   000044   E0           MOVX    A,@DPTR
+   \   000045   FB           MOV     R3,A
+   \   000046   7A80         MOV     R2,#-0x80
+   \   000048   7948         MOV     R1,#0x48
+   \   00004A   12....       LCALL   ??MT_BuildAndSendZToolResponse?relay
+    190          #endif
+    191              osal_mem_free( msg_ptr );
+   \   00004D                ; Setup parameters for call to function osal_mem_free
+   \   00004D   EE           MOV     A,R6
+   \   00004E   FA           MOV     R2,A
+   \   00004F   EF           MOV     A,R7
+   \   000050   FB           MOV     R3,A
+   \   000051   12....       LCALL   ??osal_mem_free?relay
+    192            }
+    193          }
+   \                     ??MT_ProcessDebugStr_1:
+   \   000054   7F06         MOV     R7,#0x6
+   \   000056   02....       LJMP    ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??MT_ProcessDebugMsg?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    MT_ProcessDebugMsg
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??MT_ProcessDebugStr?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    MT_ProcessDebugStr
+    194          /***************************************************************************************************
+    195           ***************************************************************************************************/
+
+   Maximum stack usage in bytes:
+
+     Function                       ISTACK PSTACK XSTACK
+     --------                       ------ ------ ------
+     MT_ProcessDebugMsg                 1      0     27
+       -> osal_msg_allocate             0      0     54
+       -> MT_BuildAndSendZToolResponse
+                                        0      0     54
+       -> osal_msg_deallocate           0      0     54
+     MT_ProcessDebugStr                 0      0     14
+       -> osal_mem_alloc                0      0     28
+       -> MT_BuildAndSendZToolResponse
+                                        0      0     28
+       -> osal_mem_free                 0      0     28
+
+
+   Segment part sizes:
+
+     Function/Label             Bytes
+     --------------             -----
+     MT_ProcessDebugMsg          283
+     ?Subroutine1                 11
+     ?Subroutine0                 32
+     MT_ProcessDebugStr           89
+     ??MT_ProcessDebugMsg?relay    6
+     ??MT_ProcessDebugStr?relay    6
+
+ 
+ 415 bytes in segment BANKED_CODE
+  12 bytes in segment BANK_RELAYS
+ 
+ 427 bytes of CODE memory
+
+Errors: none
+Warnings: none

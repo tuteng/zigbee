@@ -1,0 +1,747 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         05/May/2014  19:39:49 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍø£©\S #
+#                          ource\SampleApp.c                                  #
+#    Command line       =  -f H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´«Êä #
+#                          £©\Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍø£ #
+#                          ©\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg    #
+#                          (-DCPU32MHZ -DROOT=__near_func                     #
+#                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE                   #
+#                          -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f       #
+#                          H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg      #
+#                          (-DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR      #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFF0                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍø£©\S #
+#                          ource\SampleApp.c -D ZIGBEEPRO -D ZTOOL_P1 -D      #
+#                          MT_TASK -D MT_SYS_FUNC -D xMT_ZDO_FUNC -D          #
+#                          LCD_SUPPORTED=DEBUG -D NV_RESTORE -lC              #
+#                          H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\CoordinatorEB\List\ -lA                    #
+#                          H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\CoordinatorEB\List\ --diag_suppress        #
+#                          Pe001,Pa010 -o H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×é #
+#                          ÍøÓëÊı¾İ´«Êä£©\Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷Í #
+#                          øÂç£¨×Ô×éÍø£©\CC2530DB\CoordinatorEB\Obj\ -e       #
+#                          --debug --core=plain --dptr=16,1                   #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´«Êä #
+#                          £©\Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍø£ #
+#                          ©\CC2530DB\ -I H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×é #
+#                          ÍøÓëÊı¾İ´«Êä£©\Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷Í #
+#                          øÂç£¨×Ô×éÍø£©\CC2530DB\..\SOURCE\ -I               #
+#                          H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\..\..\..\ZMAIN\TI2530DB\ -I                #
+#                          H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\MT\ -I           #
+#                          H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\HAL\INCLUDE\ -I  #
+#                          H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\HAL\TARGET\CC253 #
+#                          0EB\ -I H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾ #
+#                          İ´«Êä£©\Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô #
+#                          ×éÍø£©\CC2530DB\..\..\..\..\..\COMPONENTS\OSAL\MCU #
+#                          \CCSOC\ -I H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓë #
+#                          Êı¾İ´«Êä£©\Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£ #
+#                          ¨×Ô×éÍø£©\CC2530DB\..\..\..\..\..\COMPONENTS\OSAL\ #
+#                          INCLUDE\ -I H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓ #
+#                          ëÊı¾İ´«Êä£©\Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç #
+#                          £¨×Ô×éÍø£©\CC2530DB\..\..\..\..\..\COMPONENTS\STAC #
+#                          K\AF\ -I H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı #
+#                          ¾İ´«Êä£©\Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨× #
+#                          Ô×éÍø£©\CC2530DB\..\..\..\..\..\COMPONENTS\STACK\N #
+#                          WK\ -I H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ #
+#                          ´«Êä£©\Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô× #
+#                          éÍø£©\CC2530DB\..\..\..\..\..\COMPONENTS\STACK\SEC #
+#                          \ -I H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´« #
+#                          Êä£©\Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍ #
+#                          ø£©\CC2530DB\..\..\..\..\..\COMPONENTS\STACK\SAPI\ #
+#                           -I H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´«Ê #
+#                          ä£©\Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍø #
+#                          £©\CC2530DB\..\..\..\..\..\COMPONENTS\STACK\SYS\   #
+#                          -I H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´«Êä #
+#                          £©\Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍø£ #
+#                          ©\CC2530DB\..\..\..\..\..\COMPONENTS\STACK\ZDO\    #
+#                          -I H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´«Êä #
+#                          £©\Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍø£ #
+#                          ©\CC2530DB\..\..\..\..\..\COMPONENTS\ZMAC\F8W\ -I  #
+#                          H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\ZMAC\ -I         #
+#                          H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\SERVICES\SADDR\  #
+#                          -I H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´«Êä #
+#                          £©\Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍø£ #
+#                          ©\CC2530DB\..\..\..\..\..\COMPONENTS\SERVICES\SDAT #
+#                          A\ -I H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´ #
+#                          «Êä£©\Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×é #
+#                          Íø£©\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\INCLUD #
+#                          E\ -I H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´ #
+#                          «Êä£©\Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×é #
+#                          Íø£©\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\HIGH_L #
+#                          EVEL\ -I H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı #
+#                          ¾İ´«Êä£©\Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨× #
+#                          Ô×éÍø£©\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\LOW #
+#                          _LEVEL\srf04\ -I H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô #
+#                          ×éÍøÓëÊı¾İ´«Êä£©\Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ #
+#                          ÷ÍøÂç£¨×Ô×éÍø£©\CC2530DB\..\..\..\..\..\COMPONENTS #
+#                          \MAC\LOW_LEVEL\srf04\SINGLE_CHIP\ -Ohz             #
+#                          --require_prototypes                               #
+#    List file          =  H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\CoordinatorEB\List\SampleApp.lst           #
+#    Object file        =  H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\CoordinatorEB\Obj\SampleApp.r51            #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+H:\zigbeesrc\8.ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍøÓëÊı¾İ´«Êä£©\Projects\zstack\Samples\ÎŞÏß´«¸ĞÆ÷ÍøÂç£¨×Ô×éÍø£©\Source\SampleApp.c
+      1          /**************************************************************************************************
+      2            Filename:       SampleApp.c
+      3            Revised:        $Date: 2009-03-18 15:56:27 -0700 (Wed, 18 Mar 2009) $
+      4            Revision:       $Revision: 19453 $
+      5          
+      6            Description:    Sample Application (no Profile).
+      7          
+      8          
+      9            Copyright 2007 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights
+     12            granted under the terms of a software license agreement between the user
+     13            who downloaded the software, his/her employer (which must be your employer)
+     14            and Texas Instruments Incorporated (the "License").  You may not use this
+     15            Software unless you agree to abide by the terms of the License. The License
+     16            limits your use, and you acknowledge, that the Software may not be modified,
+     17            copied or distributed unless embedded on a Texas Instruments microcontroller
+     18            or used solely and exclusively in conjunction with a Texas Instruments radio
+     19            frequency transceiver, which is integrated into your product.  Other than for
+     20            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     21            works of, modify, distribute, perform, display or sell this Software and/or
+     22            its documentation for any purpose.
+     23          
+     24            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     25            PROVIDED “AS IS?WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     26            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     27            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     28            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     29            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     30            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     31            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     32            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     33            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     34            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     35          
+     36            Should you have any questions regarding your right to use this Software,
+     37            contact Texas Instruments Incorporated at www.TI.com.
+     38          **************************************************************************************************/
+     39          
+     40          /*********************************************************************
+     41            This application isn't intended to do anything useful, it is
+     42            intended to be a simple example of an application's structure.
+     43          
+     44            This application sends it's messages either as broadcast or
+     45            broadcast filtered group messages.  The other (more normal)
+     46            message addressing is unicast.  Most of the other sample
+     47            applications are written to support the unicast message model.
+     48          
+     49            Key control:
+     50              SW1:  Sends a flash command to all devices in Group 1.
+     51              SW2:  Adds/Removes (toggles) this device in and out
+     52                    of Group 1.  This will enable and disable the
+     53                    reception of the flash command.
+     54          *********************************************************************/
+     55          
+     56          /*********************************************************************
+     57           * INCLUDES
+     58           */
+     59          #include "OSAL.h"
+     60          #include "ZGlobals.h"
+     61          #include "AF.h"
+     62          #include "aps_groups.h"
+     63          #include "ZDApp.h"
+     64          
+     65          #include "SampleApp.h"
+     66          #include "SampleAppHw.h"
+     67          
+     68          #include "OnBoard.h"
+     69          
+     70          /* HAL */
+     71          #include "hal_lcd.h"
+     72          #include "hal_led.h"
+     73          #include "hal_key.h"
+     74          #include "MT_UART.h"
+     75          #include "MT_APP.h"
+     76          #include "MT.h"
+     77          //´«¸ĞÆ÷±êÖ¾Î»¶¨Òå£¬ÒÔ¼°´«¸ĞÆ÷²Ù×÷Í·ÎÄ¼ş
+     78          #include "sensor.h"
+     79          #include "DS18B20.h"
+     80          #include "DHT11.H"
+     81          
+     82          /*********************************************************************
+     83           * MACROS
+     84           */
+     85          
+     86          /*********************************************************************
+     87           * CONSTANTS
+     88           */
+     89          
+     90          /*********************************************************************
+     91           * TYPEDEFS
+     92           */
+     93          
+     94          /*********************************************************************
+     95           * GLOBAL VARIABLES
+     96           */
+     97          
+     98          // This list should be filled with Application specific Cluster IDs.
+     99          const cId_t SampleApp_ClusterList[SAMPLEAPP_MAX_CLUSTERS] =
+    100          {
+    101            SAMPLEAPP_PERIODIC_CLUSTERID,
+    102            SAMPLEAPP_FLASH_CLUSTERID
+    103          };
+    104          
+    105          const SimpleDescriptionFormat_t SampleApp_SimpleDesc =
+    106          {
+    107            SAMPLEAPP_ENDPOINT,              //  int Endpoint;
+    108            SAMPLEAPP_PROFID,                //  uint16 AppProfId[2];
+    109            SAMPLEAPP_DEVICEID,              //  uint16 AppDeviceId[2];
+    110            SAMPLEAPP_DEVICE_VERSION,        //  int   AppDevVer:4;
+    111            SAMPLEAPP_FLAGS,                 //  int   AppFlags:4;
+    112            SAMPLEAPP_MAX_CLUSTERS,          //  uint8  AppNumInClusters;
+    113            (cId_t *)SampleApp_ClusterList,  //  uint8 *pAppInClusterList;
+    114            SAMPLEAPP_MAX_CLUSTERS,          //  uint8  AppNumInClusters;
+    115            (cId_t *)SampleApp_ClusterList   //  uint8 *pAppInClusterList;
+    116          };
+    117          
+    118          // This is the Endpoint/Interface description.  It is defined here, but
+    119          // filled-in in SampleApp_Init().  Another way to go would be to fill
+    120          // in the structure here and make it a "const" (in code space).  The
+    121          // way it's defined in this sample app it is define in RAM.
+    122          endPointDesc_t SampleApp_epDesc;
+    123          
+    124          /*********************************************************************
+    125           * EXTERNAL VARIABLES
+    126           */
+    127          
+    128          /*********************************************************************
+    129           * EXTERNAL FUNCTIONS
+    130           */
+    131          
+    132          /*********************************************************************
+    133           * LOCAL VARIABLES
+    134           */
+    135          uint8 SampleApp_TaskID;   // Task ID for internal task/event processing
+    136                                    // This variable will be received when
+    137                                    // SampleApp_Init() is called.
+    138          devStates_t SampleApp_NwkState;
+    139          
+    140          uint8 SampleApp_TransID;  // This is the unique message ID (counter)
+    141          
+    142          afAddrType_t SampleApp_Periodic_DstAddr;
+    143          afAddrType_t SampleApp_Flash_DstAddr;
+    144          
+    145          afAddrType_t Point_To_Point_DstAddr;//  µã¶ÔµãÍ¨ĞÅ¶¨Òå
+    146          
+    147          aps_Group_t SampleApp_Group;
+    148          
+    149          uint8 SampleAppPeriodicCounter = 0;
+    150          uint8 SampleAppFlashCounter = 0;
+    151          
+    152          /*********************************************************************
+    153           * LOCAL FUNCTIONS
+    154           */
+    155          void SampleApp_HandleKeys( uint8 shift, uint8 keys );
+    156          void SampleApp_MessageMSGCB( afIncomingMSGPacket_t *pckt );
+    157          //void SampleApp_SendPeriodicMessage( void );
+    158          void SampleApp_Send18b20PeriodicMessage(); 
+    159          void SampleApp_Senddht11PeriodicMessage(); 
+    160          void SampleApp_SendPointToPointMessage(void); // µã¶ÔµãÍ¨Ñ¶¶¨Òå
+    161          void SampleApp_SendFlashMessage( uint16 flashTime );
+    162          void SampleApp_SerialCMD(mtOSALSerialData_t *cmdMsg);
+    163          
+    164          /*********************************************************************
+    165           * NETWORK LAYER CALLBACKS
+    166           */
+    167          
+    168          /*********************************************************************
+    169           * PUBLIC FUNCTIONS
+    170           */
+    171          
+    172          /*********************************************************************
+    173           * @fn      SampleApp_Init
+    174           *
+    175           * @brief   Initialization function for the Generic App Task.
+    176           *          This is called during initialization and should contain
+    177           *          any application specific initialization (ie. hardware
+    178           *          initialization/setup, table initialization, power up
+    179           *          notificaiton ... ).
+    180           *
+    181           * @param   task_id - the ID assigned by OSAL.  This ID should be
+    182           *                    used to send messages and set timers.
+    183           *
+    184           * @return  none
+    185           */
+    186          void SampleApp_Init( uint8 task_id )
+    187          {
+    188            SampleApp_TaskID = task_id;
+    189            SampleApp_NwkState = DEV_INIT;
+    190            SampleApp_TransID = 0;
+    191            
+    192           /***********´®¿Ú³õÊ¼»¯************/
+    193            MT_UartInit();//³õÊ¼»¯
+    194            MT_UartRegisterTaskID(task_id);//µÇ¼ÇÈÎÎñºÅ
+    195            HalUARTWrite(0,"Hello World\n",12);
+    196            
+    197            IO_initial();
+                   ^
+Error[Pa045]: function "IO_initial" has no prototype
+    198            
+    199            // Device hardware initialization can be added here or in main() (Zmain.c).
+    200            // If the hardware is application specific - add it here.
+    201            // If the hardware is other parts of the device add it in main().
+    202          
+    203           #if defined ( BUILD_ALL_DEVICES )
+    204            // The "Demo" target is setup to have BUILD_ALL_DEVICES and HOLD_AUTO_START
+    205            // We are looking at a jumper (defined in SampleAppHw.c) to be jumpered
+    206            // together - if they are - we will start up a coordinator. Otherwise,
+    207            // the device will start as a router.
+    208            if ( readCoordinatorJumper() )
+    209              zgDeviceLogicalType = ZG_DEVICETYPE_COORDINATOR;
+    210            else
+    211              zgDeviceLogicalType = ZG_DEVICETYPE_ROUTER;
+    212          #endif // BUILD_ALL_DEVICES
+    213          
+    214          #if defined ( HOLD_AUTO_START )
+    215            // HOLD_AUTO_START is a compile option that will surpress ZDApp
+    216            //  from starting the device and wait for the application to
+    217            //  start the device.
+    218            ZDOInitDevice(0);
+    219          #endif
+    220          
+    221            // Setup for the periodic message's destination address
+    222            // Broadcast to everyone
+    223            SampleApp_Periodic_DstAddr.addrMode = (afAddrMode_t)AddrBroadcast;
+    224            SampleApp_Periodic_DstAddr.endPoint = SAMPLEAPP_ENDPOINT;
+    225            SampleApp_Periodic_DstAddr.addr.shortAddr = 0xFFFF;
+    226          
+    227            // Setup for the flash command's destination address - Group 1
+    228            SampleApp_Flash_DstAddr.addrMode = (afAddrMode_t)afAddrGroup;
+    229            SampleApp_Flash_DstAddr.endPoint = SAMPLEAPP_ENDPOINT;
+    230            SampleApp_Flash_DstAddr.addr.shortAddr = SAMPLEAPP_FLASH_GROUP;
+    231            
+    232              //  µã¶ÔµãÍ¨Ñ¶¶¨Òå
+    233            Point_To_Point_DstAddr.addrMode = (afAddrMode_t)Addr16Bit; //µã²¥
+    234            Point_To_Point_DstAddr.endPoint = SAMPLEAPP_ENDPOINT;
+    235            Point_To_Point_DstAddr.addr.shortAddr = 0x0000;//·¢¸øĞ­µ÷Æ÷
+    236            
+    237          
+    238            // Fill out the endpoint description.
+    239            SampleApp_epDesc.endPoint = SAMPLEAPP_ENDPOINT;
+    240            SampleApp_epDesc.task_id = &SampleApp_TaskID;
+    241            SampleApp_epDesc.simpleDesc
+    242                      = (SimpleDescriptionFormat_t *)&SampleApp_SimpleDesc;
+    243            SampleApp_epDesc.latencyReq = noLatencyReqs;
+    244          
+    245            // Register the endpoint description with the AF
+    246            afRegister( &SampleApp_epDesc );
+    247          
+    248            // Register for all key events - This app will handle all key events
+    249            RegisterForKeys( SampleApp_TaskID );
+    250          
+    251            // By default, all devices start out in Group 1
+    252            SampleApp_Group.ID = 0x0001;
+    253            osal_memcpy( SampleApp_Group.name, "Group 1", 7  );
+    254            aps_AddGroup( SAMPLEAPP_ENDPOINT, &SampleApp_Group );
+    255          
+    256          #if defined ( LCD_SUPPORTED )
+    257            HalLcdWriteString( "SampleApp", HAL_LCD_LINE_1 );
+    258          #endif
+    259          }
+    260          
+    261          /*********************************************************************
+    262           * @fn      SampleApp_ProcessEvent
+    263           *
+    264           * @brief   Generic Application Task event processor.  This function
+    265           *          is called to process all events for the task.  Events
+    266           *          include timers, messages and any other user defined events.
+    267           *
+    268           * @param   task_id  - The OSAL assigned task ID.
+    269           * @param   events - events to process.  This is a bit map and can
+    270           *                   contain more than one event.
+    271           *
+    272           * @return  none
+    273           */
+    274          uint16 SampleApp_ProcessEvent( uint8 task_id, uint16 events )
+    275          {
+    276            afIncomingMSGPacket_t *MSGpkt;
+    277            (void)task_id;  // Intentionally unreferenced parameter
+    278          
+    279            if ( events & SYS_EVENT_MSG )
+    280            {
+    281              MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( SampleApp_TaskID );
+    282              while ( MSGpkt )
+    283              {
+    284                switch ( MSGpkt->hdr.event )
+    285                {
+    286                  
+    287                  case CMD_SERIAL_MSG:  //´®¿ÚÊÕµ½Êı¾İºóÓÉMT_UART²ã´«µİ¹ıÀ´µÄÊı¾İ£¬±àÒëÊ±²»¶¨ÒåMT_TASK£¬ÔòÓÉMT_UART²ãÖ±½Ó´«µİµ½´ËÓ¦ÓÃ²ã
+    288                 // Èç¹ûÊÇÓÉMT_UART²ã´«¹ıÀ´µÄÊı¾İ£¬ÔòÉÏÊöÀı×ÓÖĞ29 00 14 31¶¼ÊÇÆÕÍ¨Êı¾İ£¬´®¿Ú¿ØÖÆÊ±ºòÓÃµÄ¡£   
+    289                  SampleApp_SerialCMD((mtOSALSerialData_t *)MSGpkt);
+    290                  break;
+    291                  
+    292                  // Received when a key is pressed
+    293                  case KEY_CHANGE:
+    294                    SampleApp_HandleKeys( ((keyChange_t *)MSGpkt)->state, ((keyChange_t *)MSGpkt)->keys );
+    295                    break;
+    296                  
+    297                  // Received when a messages is received (OTA) for this endpoint
+    298                  case AF_INCOMING_MSG_CMD:
+    299                    SampleApp_MessageMSGCB( MSGpkt );
+    300                    break;
+    301          
+    302                  // Received whenever the device changes state in the network
+    303                  case ZDO_STATE_CHANGE:
+    304                    SampleApp_NwkState = (devStates_t)(MSGpkt->hdr.status);
+    305                    if ( //(SampleApp_NwkState == DEV_ZB_COORD) //Ğ­µ÷Æ÷²»ÄÜ×ÔÎÒ·¢ËÍ¸øĞ­µ÷Æ÷
+    306                        (SampleApp_NwkState == DEV_ROUTER)
+    307                        || (SampleApp_NwkState == DEV_END_DEVICE) )
+    308                    {
+    309                      // Start sending the periodic message in a regular interval.
+    310                      osal_start_timerEx( SampleApp_TaskID,
+    311                                        SAMPLEAPP_SEND_PERIODIC_MSG_EVT,
+    312                                        SAMPLEAPP_SEND_PERIODIC_MSG_TIMEOUT );
+    313                    }
+    314                    else
+    315                    {
+    316                      // Device is no longer in the network
+    317                    }
+    318                    break;
+    319          
+    320                  default:
+    321                    break;
+    322                }
+    323          
+    324                // Release the memory
+    325                osal_msg_deallocate( (uint8 *)MSGpkt );
+    326          
+    327                // Next - if one is available
+    328                MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( SampleApp_TaskID );
+    329              }
+    330          
+    331              // return unprocessed events
+    332              return (events ^ SYS_EVENT_MSG);
+    333            }
+    334          
+    335            // Send a message out - This event is generated by a timer
+    336            //  (setup in SampleApp_Init()).
+    337            if ( events & SAMPLEAPP_SEND_PERIODIC_MSG_EVT )
+    338            {
+    339          #if ds18b20
+    340               SampleApp_Send18b20PeriodicMessage();  //·¢ËÍÊı¾İº¯Êı
+    341          #endif
+    342          #if dht11
+    343               SampleApp_Senddht11PeriodicMessage(); 
+    344          #endif
+    345               
+    346               
+    347              // Setup to send message again in normal period (+ a little jitter)
+    348             
+    349              osal_start_timerEx( SampleApp_TaskID, SAMPLEAPP_SEND_PERIODIC_MSG_EVT,
+    350                  (SAMPLEAPP_SEND_PERIODIC_MSG_TIMEOUT + (osal_rand() & 0x00FF)) );
+    351          
+    352              // return unprocessed events
+    353              return (events ^ SAMPLEAPP_SEND_PERIODIC_MSG_EVT);
+    354            }
+    355          
+    356            // Discard unknown events
+    357            return 0;
+    358          }
+    359          
+    360          /*********************************************************************
+    361           * Event Generation Functions
+    362           */
+    363          /*********************************************************************
+    364           * @fn      SampleApp_HandleKeys
+    365           *
+    366           * @brief   Handles all key events for this device.
+    367           *
+    368           * @param   shift - true if in shift/alt.
+    369           * @param   keys - bit field for key events. Valid entries:
+    370           *                 HAL_KEY_SW_2
+    371           *                 HAL_KEY_SW_1
+    372           *
+    373           * @return  none
+    374           */
+    375          void SampleApp_HandleKeys( uint8 shift, uint8 keys )
+    376          {
+    377            (void)shift;  // Intentionally unreferenced parameter
+    378            
+    379            if ( keys & HAL_KEY_SW_1 )
+    380            {
+    381              /* This key sends the Flash Command is sent to Group 1.
+    382               * This device will not receive the Flash Command from this
+    383               * device (even if it belongs to group 1).
+    384               */
+    385              SampleApp_SendFlashMessage( SAMPLEAPP_FLASH_DURATION );
+    386            }
+    387          
+    388            if ( keys & HAL_KEY_SW_2 )
+    389            {
+    390              /* The Flashr Command is sent to Group 1.
+    391               * This key toggles this device in and out of group 1.
+    392               * If this device doesn't belong to group 1, this application
+    393               * will not receive the Flash command sent to group 1.
+    394               */
+    395              aps_Group_t *grp;
+    396              grp = aps_FindGroup( SAMPLEAPP_ENDPOINT, SAMPLEAPP_FLASH_GROUP );
+    397              if ( grp )
+    398              {
+    399                // Remove from the group
+    400                aps_RemoveGroup( SAMPLEAPP_ENDPOINT, SAMPLEAPP_FLASH_GROUP );
+    401              }
+    402              else
+    403              {
+    404                // Add to the flash group
+    405                aps_AddGroup( SAMPLEAPP_ENDPOINT, &SampleApp_Group );
+    406              }
+    407            }
+    408          }
+    409          
+    410          /*********************************************************************
+    411           * LOCAL FUNCTIONS
+    412           */
+    413          
+    414          /*********************************************************************
+    415           * @fn      SampleApp_MessageMSGCB
+    416           *
+    417           * @brief   Data message processor callback.  This function processes
+    418           *          any incoming data - probably from other devices.  So, based
+    419           *          on cluster ID, perform the intended action.
+    420           *
+    421           * @param   none
+    422           *
+    423           * @return  none
+    424           */
+    425          void SampleApp_MessageMSGCB( afIncomingMSGPacket_t *pkt )
+    426          {
+    427            uint8 asc_16[16]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+    428            uint16 flashTime,temp;
+    429            uint8 receive_data[10];
+    430            uint8 i=0;
+    431            switch ( pkt->clusterId )
+    432            {
+    433              case SAMPLEAPP_POINT_TO_POINT_CLUSTERID:      
+    434                temp=pkt->srcAddr.addr.shortAddr; //¶Á³öÊı¾İ°üµÄ16Î»¶ÌµØÖ·     
+    435                for(i=0;i<10;i++) receive_data[i]=pkt->cmd.Data[i]; //¶Á³öÊı¾İ(Ã¿´Î10¸ö£© 
+    436                
+    437               HalUARTWrite(0,"ENDDEVICE:0x",12);  //´®¿ÚÏÔÊ¾
+    438                /****½«¶ÌµØÖ··Ö½â£¬Í¨¹ı´®¿ÚÏÔÊ¾³öÀ´*****/
+    439                HalUARTWrite(0,&asc_16[temp/4096],1);
+    440                HalUARTWrite(0,&asc_16[temp%4096/256],1);
+    441                HalUARTWrite(0,&asc_16[temp%256/16],1);
+    442                HalUARTWrite(0,&asc_16[temp%16],1);
+    443                
+    444                HalUARTWrite(0,"Reveive wen: ",13); //´®¿ÚÏÔÊ¾
+    445                /****½«½ÓÊÕµ½µÄµÚÒ»¸ö·Ö½â£¬Í¨¹ı´®¿ÚÏÔÊ¾³öÀ´*****/
+    446                HalUARTWrite(0,&asc_16[receive_data[0]/100],1);
+    447                HalUARTWrite(0,&asc_16[receive_data[0]%100/10],1);
+    448                HalUARTWrite(0,&asc_16[receive_data[0]%10],1);
+    449                
+    450                
+    451                HalUARTWrite(0,"\n",1);               // »Ø³µ»»ĞĞ
+    452            
+    453                HalUARTWrite(0,"Reveive shi: ",13); //´®¿ÚÏÔÊ¾
+    454                HalUARTWrite(0,&asc_16[receive_data[1]/100],1);
+    455                HalUARTWrite(0,&asc_16[receive_data[1]%100/10],1);
+    456                HalUARTWrite(0,&asc_16[receive_data[1]%10],1);
+    457                
+    458                 HalUARTWrite(0,"\n",1);   
+    459                
+    460          
+    461                
+    462                break;
+    463          
+    464              case SAMPLEAPP_FLASH_CLUSTERID:
+    465                flashTime = BUILD_UINT16(pkt->cmd.Data[1], pkt->cmd.Data[2] );
+    466                HalLedBlink( HAL_LED_4, 4, 50, (flashTime / 4) );
+    467                break;
+    468            }
+    469          }
+    470          
+    471          /*********************************************************************
+    472           * @fn      SampleApp_SendPeriodicMessage
+    473           *
+    474           * @brief   Send the periodic message.
+    475           *
+    476           * @param   none
+    477           *
+    478           * @return  none
+    479           */
+    480          /*
+    481          void SampleApp_SendPeriodicMessage( void )
+    482          {
+    483            uint8 data[10]={178,201,45,56,46,58,77,32,88,19};
+    484            
+    485            if ( AF_DataRequest(  &Point_To_Point_DstAddr, &SampleApp_epDesc,
+    486                                 SAMPLEAPP_POINT_TO_POINT_CLUSTERID,
+    487                                 10,                //Ò»¹²10¸öÊı¾İ
+    488                                 data,              //×°ÔØÒª·¢ËÍµÄÊı¾İ
+    489                                 &SampleApp_TransID,
+    490                                 AF_DISCV_ROUTE,
+    491                                 AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
+    492            {
+    493            }
+    494          }
+    495          */
+    496          void SampleApp_Send18b20PeriodicMessage( void )
+                      ^
+Error[Pa045]: function "SampleApp_Send18b20PeriodicMessage" has no prototype
+    497          {
+    498            uint8 data[10]={178,201,45,56,46,58,77,32,88,19};
+    499            unsigned int temperature;
+    500            unsigned int temp;
+    501            unsigned char DS18B20_id[8]={40,252,5,130,4,0,0,131};
+    502            temperature = read_data(DS18B20_id);
+    503            data[0] = temperature;
+    504            data[1] = temperature >> 8;
+    505            temp = temperature >> 8;
+    506            data[2] = temp >> 8;
+    507            temp = temp >> 8;
+    508            data[3] = temp >> 8;
+    509            
+    510            if ( AF_DataRequest(  &Point_To_Point_DstAddr, &SampleApp_epDesc,
+    511                                 SAMPLEAPP_POINT_TO_POINT_CLUSTERID,
+    512                                 10,                //Ò»¹²10¸öÊı¾İ
+    513                                 data,              //×°ÔØÒª·¢ËÍµÄÊı¾İ
+    514                                 &SampleApp_TransID,
+    515                                 AF_DISCV_ROUTE,
+    516                                 AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
+    517            {
+    518            }
+    519          }
+    520          
+    521          void SampleApp_Senddht11PeriodicMessage( void )
+                      ^
+Error[Pa045]: function "SampleApp_Senddht11PeriodicMessage" has no prototype
+    522          {
+    523            unsigned char *wenshi;
+    524            uint8 data1[2]={0,0,};
+    525            wenshi = DHT11();
+    526            data1[0] = *wenshi ;
+    527            data1[1] = *(wenshi+1);
+    528           // data1[1]=wendu_ge;
+    529            if ( AF_DataRequest(  &Point_To_Point_DstAddr, &SampleApp_epDesc,
+    530                                 SAMPLEAPP_POINT_TO_POINT_CLUSTERID,
+    531                                 2,                //Ò»¹²10¸öÊı¾İ
+    532                                 data1,              //×°ÔØÒª·¢ËÍµÄÊı¾İ
+    533                                 &SampleApp_TransID,
+    534                                 AF_DISCV_ROUTE,
+    535                                 AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
+    536            {
+    537            }
+    538          }
+    539          
+    540          
+    541          
+    542          
+    543          /*********************************************************************
+    544           * @fn      SampleApp_SendFlashMessage
+    545           *
+    546           * @brief   Send the flash message to group 1.
+    547           *
+    548           * @param   flashTime - in milliseconds
+    549           *
+    550           * @return  none
+    551           */
+    552          void SampleApp_SendFlashMessage( uint16 flashTime )
+    553          {
+    554            uint8 buffer[3];
+    555            buffer[0] = (uint8)(SampleAppFlashCounter++);
+    556            buffer[1] = LO_UINT16( flashTime );
+    557            buffer[2] = HI_UINT16( flashTime );
+    558          
+    559            if ( AF_DataRequest( &SampleApp_Flash_DstAddr, &SampleApp_epDesc,
+    560                                 SAMPLEAPP_FLASH_CLUSTERID,
+    561                                 3,
+    562                                 buffer,
+    563                                 &SampleApp_TransID,
+    564                                 AF_DISCV_ROUTE,
+    565                                 AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
+    566            {
+    567            }
+    568            else
+    569            {
+    570              // Error occurred in request to send.
+    571            }
+    572          }
+    573          void SampleApp_SerialCMD(mtOSALSerialData_t *cmdMsg)//·¢ËÍ FE 02 01 F1  ,Ôò·µ»Ø01 F1
+    574          {
+    575           uint8 i,len,*str=NULL;
+    576           str=cmdMsg->msg;
+    577           len=*str; //msgÀïµÄµÚ1¸ö×Ö½Ú´ú±íºóÃæµÄÊı¾İ³¤¶È
+    578           
+    579           for(i=1;i<=len;i++)
+    580           HalUARTWrite(0,str+i,1 ); 
+    581           HalUARTWrite(0,"\n",1 );//»»ĞĞ  
+    582          
+    583            if ( AF_DataRequest( &SampleApp_Periodic_DstAddr, &SampleApp_epDesc,
+    584                                 SAMPLEAPP_COM_CLUSTERID,
+    585                                 len,// Êı¾İ³¤¶È         
+    586                                 str+1,//Êı¾İÄÚÈİ
+    587                                 &SampleApp_TransID,//  ´ØID  ??
+    588                                 AF_DISCV_ROUTE,
+    589                                 AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
+    590            {
+    591            }
+    592            else
+    593            {
+    594              // Error occurred in request to send.
+    595            }
+    596           
+    597          }
+    598          /*********************************************************************
+    599          *********************************************************************/
+
+Errors: 3
+Warnings: none

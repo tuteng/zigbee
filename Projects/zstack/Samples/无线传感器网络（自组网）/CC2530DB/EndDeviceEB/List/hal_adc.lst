@@ -1,0 +1,860 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         03/May/2014  10:02:15 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Components\hal\target\CC2530EB\hal_adc.c           #
+#    Command line       =  -f H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä #
+#                          £©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£ #
+#                          ©\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg    #
+#                          (-DCPU32MHZ -DROOT=__near_func -DBLINK_LEDS) -f    #
+#                          H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg      #
+#                          (-DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR      #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFF0                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Components\hal\target\CC2530EB\hal_adc.c -D        #
+#                          NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D            #
+#                          MT_SYS_FUNC -D MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG  #
+#                          -lC H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Ê #
+#                          ä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø #
+#                          £©\CC2530DB\EndDeviceEB\List\ -lA                  #
+#                          H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\EndDeviceEB\List\ --diag_suppress          #
+#                          Pe001,Pa010 -o H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×é #
+#                          ÍøÓëÊý¾Ý´«Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷Í #
+#                          øÂç£¨×Ô×éÍø£©\CC2530DB\EndDeviceEB\Obj\ -e         #
+#                          --debug --core=plain --dptr=16,1                   #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä #
+#                          £©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£ #
+#                          ©\CC2530DB\ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×é #
+#                          ÍøÓëÊý¾Ý´«Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷Í #
+#                          øÂç£¨×Ô×éÍø£©\CC2530DB\..\SOURCE\ -I               #
+#                          H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\..\..\..\ZMAIN\TI2530DB\ -I                #
+#                          H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\MT\ -I           #
+#                          H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\HAL\INCLUDE\ -I  #
+#                          H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\HAL\TARGET\CC253 #
+#                          0EB\ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾ #
+#                          Ý´«Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô #
+#                          ×éÍø£©\CC2530DB\..\..\..\..\..\COMPONENTS\OSAL\MCU #
+#                          \CCSOC\ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓë #
+#                          Êý¾Ý´«Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£ #
+#                          ¨×Ô×éÍø£©\CC2530DB\..\..\..\..\..\COMPONENTS\OSAL\ #
+#                          INCLUDE\ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓ #
+#                          ëÊý¾Ý´«Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç #
+#                          £¨×Ô×éÍø£©\CC2530DB\..\..\..\..\..\COMPONENTS\STAC #
+#                          K\AF\ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý #
+#                          ¾Ý´«Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨× #
+#                          Ô×éÍø£©\CC2530DB\..\..\..\..\..\COMPONENTS\STACK\N #
+#                          WK\ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý #
+#                          ´«Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô× #
+#                          éÍø£©\CC2530DB\..\..\..\..\..\COMPONENTS\STACK\SEC #
+#                          \ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´« #
+#                          Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍ #
+#                          ø£©\CC2530DB\..\..\..\..\..\COMPONENTS\STACK\SAPI\ #
+#                           -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Ê #
+#                          ä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø #
+#                          £©\CC2530DB\..\..\..\..\..\COMPONENTS\STACK\SYS\   #
+#                          -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä #
+#                          £©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£ #
+#                          ©\CC2530DB\..\..\..\..\..\COMPONENTS\STACK\ZDO\    #
+#                          -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä #
+#                          £©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£ #
+#                          ©\CC2530DB\..\..\..\..\..\COMPONENTS\ZMAC\F8W\ -I  #
+#                          H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\ZMAC\ -I         #
+#                          H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\SERVICES\SADDR\  #
+#                          -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä #
+#                          £©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£ #
+#                          ©\CC2530DB\..\..\..\..\..\COMPONENTS\SERVICES\SDAT #
+#                          A\ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´ #
+#                          «Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×é #
+#                          Íø£©\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\INCLUD #
+#                          E\ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´ #
+#                          «Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×é #
+#                          Íø£©\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\HIGH_L #
+#                          EVEL\ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý #
+#                          ¾Ý´«Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨× #
+#                          Ô×éÍø£©\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\LOW #
+#                          _LEVEL\srf04\ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô #
+#                          ×éÍøÓëÊý¾Ý´«Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ #
+#                          ÷ÍøÂç£¨×Ô×éÍø£©\CC2530DB\..\..\..\..\..\COMPONENTS #
+#                          \MAC\LOW_LEVEL\srf04\SINGLE_CHIP\ -Ohz             #
+#    List file          =  H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\EndDeviceEB\List\hal_adc.lst               #
+#    Object file        =  H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\EndDeviceEB\Obj\hal_adc.r51                #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\Components\hal\target\CC2530EB\hal_adc.c
+      1          /**************************************************************************************************
+      2            Filename:       hal_adc.c
+      3            Revised:        $Date: 2009-12-17 13:13:47 -0800 (Thu, 17 Dec 2009) $
+      4            Revision:       $Revision: 21356 $
+      5          
+      6            Description:    This file contains the interface to the HAL ADC.
+      7          
+      8          
+      9            Copyright 2006-2009 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights
+     12            granted under the terms of a software license agreement between the user
+     13            who downloaded the software, his/her employer (which must be your employer)
+     14            and Texas Instruments Incorporated (the "License").  You may not use this
+     15            Software unless you agree to abide by the terms of the License. The License
+     16            limits your use, and you acknowledge, that the Software may not be modified,
+     17            copied or distributed unless embedded on a Texas Instruments microcontroller
+     18            or used solely and exclusively in conjunction with a Texas Instruments radio
+     19            frequency transceiver, which is integrated into your product.  Other than for
+     20            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     21            works of, modify, distribute, perform, display or sell this Software and/or
+     22            its documentation for any purpose.
+     23          
+     24            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     25            PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     26            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     27            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     28            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     29            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     30            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     31            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     32            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     33            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     34            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     35          
+     36            Should you have any questions regarding your right to use this Software,
+     37            contact Texas Instruments Incorporated at www.TI.com.
+     38          **************************************************************************************************/
+     39          
+     40          /**************************************************************************************************
+     41           *                                           INCLUDES
+     42           **************************************************************************************************/
+     43          #include  "hal_mcu.h"
+
+   \                                 In  segment SFR_AN, at 0x88
+   \   union <unnamed> volatile __sfr _A_TCON
+   \                     _A_TCON:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xb4
+   \   unsigned char volatile __sfr ADCCON1
+   \                     ADCCON1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xb5
+   \   unsigned char volatile __sfr ADCCON2
+   \                     ADCCON2:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xb6
+   \   unsigned char volatile __sfr ADCCON3
+   \                     ADCCON3:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xba
+   \   unsigned char volatile __sfr ADCL
+   \                     ADCL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xbb
+   \   unsigned char volatile __sfr ADCH
+   \                     ADCH:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf2
+   \   unsigned char volatile __sfr ADCCFG
+   \                     ADCCFG:
+   \   000000                DS 1
+     44          #include  "hal_defs.h"
+     45          #include  "hal_types.h"
+     46          #include  "hal_adc.h"
+     47          
+     48          /**************************************************************************************************
+     49           *                                            CONSTANTS
+     50           **************************************************************************************************/
+     51          #define HAL_ADC_EOC         0x80    /* End of Conversion bit */
+     52          #define HAL_ADC_START       0x40    /* Starts Conversion */
+     53          
+     54          #define HAL_ADC_STSEL_EXT   0x00    /* External Trigger */
+     55          #define HAL_ADC_STSEL_FULL  0x10    /* Full Speed, No Trigger */
+     56          #define HAL_ADC_STSEL_T1C0  0x20    /* Timer1, Channel 0 Compare Event Trigger */
+     57          #define HAL_ADC_STSEL_ST    0x30    /* ADCCON1.ST =1 Trigger */
+     58          
+     59          #define HAL_ADC_RAND_NORM   0x00    /* Normal Operation */
+     60          #define HAL_ADC_RAND_LFSR   0x04    /* Clock LFSR */
+     61          #define HAL_ADC_RAND_SEED   0x08    /* Seed Modulator */
+     62          #define HAL_ADC_RAND_STOP   0x0c    /* Stop Random Generator */
+     63          #define HAL_ADC_RAND_BITS   0x0c    /* Bits [3:2] */
+     64          
+     65          #define HAL_ADC_DEC_064     0x00    /* Decimate by 64 : 8-bit resolution */
+     66          #define HAL_ADC_DEC_128     0x10    /* Decimate by 128 : 10-bit resolution */
+     67          #define HAL_ADC_DEC_256     0x20    /* Decimate by 256 : 12-bit resolution */
+     68          #define HAL_ADC_DEC_512     0x30    /* Decimate by 512 : 14-bit resolution */
+     69          #define HAL_ADC_DEC_BITS    0x30    /* Bits [5:4] */
+     70          
+     71          #define HAL_ADC_STSEL       HAL_ADC_STSEL_ST
+     72          #define HAL_ADC_RAND_GEN    HAL_ADC_RAND_STOP
+     73          #define HAL_ADC_REF_VOLT    HAL_ADC_REF_AVDD
+     74          #define HAL_ADC_DEC_RATE    HAL_ADC_DEC_064
+     75          #define HAL_ADC_SCHN        HAL_ADC_CHN_VDD3
+     76          #define HAL_ADC_ECHN        HAL_ADC_CHN_GND
+     77          
+     78          /* Vdd limit values */
+
+   \                                 In  segment CODE_C, align 1
+     79          static __code const uint16 HalAdcVddLimit[] =
+   \                     HalAdcVddLimit:
+   \   000000   9C36         DW 13980
+   \   000002   063A         DW 14854
+   \   000004   703D         DW 15728
+   \   000006   D940         DW 16601
+   \   000008   4344         DW 17475
+   \   00000A   AD47         DW 18349
+   \   00000C   174B         DW 19223
+   \   00000E   814E         DW 20097
+   \   000010   EA51         DW 20970
+     80          {
+     81            0x369C,       /*  VDD Limit - 1.6v  */
+     82            0x3A06,       /*  VDD Limit - 1.7v  */
+     83            0x3D70,       /*  VDD Limit - 1.8v  */
+     84            0x40D9,       /*  VDD Limit - 1.9v  */
+     85            0x4443,       /*  VDD Limit - 2.0v  */
+     86            0x47AD,       /*  VDD Limit - 2.1v  */
+     87            0x4B17,       /*  VDD Limit - 2.2v  */
+     88            0x4E81,       /*  VDD Limit - 2.3v  */
+     89            0x51EA,       /*  VDD Limit - 2.4v  */
+     90          };
+     91          
+     92          /**************************************************************************************************
+     93           *                                              MACROS
+     94           **************************************************************************************************/
+     95          #define HAL_ADC_CLR_EOC()   asm("PUSH A"); asm("MOV A,ADCL"); asm("MOV A,ADCH"); asm("POP A");
+     96          
+     97          /**************************************************************************************************
+     98           *                                            TYPEDEFS
+     99           **************************************************************************************************/
+    100          
+    101          /**************************************************************************************************
+    102           *                                         GLOBAL VARIABLES
+    103           **************************************************************************************************/
+    104          
+    105          /**************************************************************************************************
+    106           *                                          FUNCTIONS - API
+    107           **************************************************************************************************/
+    108          extern bool HalAdcCheckVdd (uint8 limit);
+    109          
+    110          /**************************************************************************************************
+    111           * @fn      HalAdcInit
+    112           *
+    113           * @brief   Initialize ADC Service
+    114           *
+    115           * @param   None
+    116           *
+    117           * @return  None
+    118           **************************************************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    119          void HalAdcInit (void)
+   \                     HalAdcInit:
+    120          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 1
+   \   000004   74FF         MOV     A,#-0x1
+   \   000006   12....       LCALL   ?ALLOC_XSTACK8
+    121          #if (HAL_ADC == TRUE)
+    122            volatile uint8  tmp;
+    123          
+    124            ADCCON1 = HAL_ADC_STSEL | HAL_ADC_RAND_GEN | 0x03;
+   \   000009   75B43F       MOV     0xb4,#0x3f
+    125            ADCCON2 = HAL_ADC_REF_VOLT | HAL_ADC_DEC_RATE | HAL_ADC_SCHN;
+   \   00000C   75B58F       MOV     0xb5,#-0x71
+    126            /*
+    127            *  After reset, the first ADC reading of the extra conversion always reads GND level.
+    128            *  We will do a few dummy conversions to bypass this bug.
+    129            */
+    130            tmp = ADCL;     /* read ADCL,ADCH to clear EOC */
+   \   00000F   12....       LCALL   ?Subroutine2 & 0xFFFF
+    131            tmp = ADCH;
+    132            ADCCON3 = HAL_ADC_REF_VOLT | HAL_ADC_DEC_RATE | HAL_ADC_ECHN;
+   \                     ??CrossCallReturnLabel_0:
+   \   000012   75B68C       MOV     0xb6,#-0x74
+    133            while ((ADCCON1 & HAL_ADC_EOC) != HAL_ADC_EOC);   /* Wait for conversion */
+   \                     ??HalAdcInit_0:
+   \   000015   E5B4         MOV     A,0xb4
+   \   000017   A2E7         MOV     C,0xE0 /* A   */.7
+   \   000019   50FA         JNC     ??HalAdcInit_0
+    134            tmp = ADCL;     /* read ADCL,ADCH to clear EOC */
+   \   00001B   E5BA         MOV     A,0xba
+   \   00001D   12....       LCALL   ??Subroutine3_0 & 0xFFFF
+    135            tmp = ADCH;
+    136            ADCCON3 = HAL_ADC_REF_VOLT | HAL_ADC_DEC_RATE | HAL_ADC_ECHN;
+   \                     ??CrossCallReturnLabel_3:
+   \   000020   75B68C       MOV     0xb6,#-0x74
+    137            while ((ADCCON1 & HAL_ADC_EOC) != HAL_ADC_EOC);   /* Wait for conversion */
+   \                     ??HalAdcInit_1:
+   \   000023   E5B4         MOV     A,0xb4
+   \   000025   A2E7         MOV     C,0xE0 /* A   */.7
+   \   000027   50FA         JNC     ??HalAdcInit_1
+    138            tmp = ADCL;     /* read ADCL,ADCH to clear EOC */
+   \   000029                REQUIRE ?Subroutine0
+   \   000029                REQUIRE ADCCON1
+   \   000029                REQUIRE ADCCON2
+   \   000029                REQUIRE ADCL
+   \   000029                REQUIRE ADCH
+   \   000029                REQUIRE ADCCON3
+   \   000029                ; // Fall through to label ?Subroutine0
+    139            tmp = ADCH;
+    140          #endif
+    141          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   E5BA         MOV     A,0xba
+   \   000002   12....       LCALL   ??Subroutine3_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_4:
+   \   000005   7401         MOV     A,#0x1
+   \   000007   12....       LCALL   ?DEALLOC_XSTACK8
+   \   00000A   D083         POP     DPH
+   \   00000C   D082         POP     DPL
+   \   00000E   02....       LJMP    ?BRET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   E5BA         MOV     A,0xba
+   \   000002   85..82       MOV     DPL,?XSP + 0
+   \   000005   85..83       MOV     DPH,?XSP + 1
+   \   000008                REQUIRE ??Subroutine3_0
+   \   000008                ; // Fall through to label ??Subroutine3_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine3_0:
+   \   000000   F0           MOVX    @DPTR,A
+   \   000001   E5BB         MOV     A,0xbb
+   \   000003   F0           MOVX    @DPTR,A
+   \   000004   22           RET
+    142          
+    143          /**************************************************************************************************
+    144           * @fn      HalAdcRead
+    145           *
+    146           * @brief   Read the ADC based on given channel and resolution
+    147           *
+    148           * @param   channel - channel where ADC will be read
+    149           * @param   resolution - the resolution of the value
+    150           *
+    151           * @return  16 bit value of the ADC in offset binary format.
+    152           *
+    153           *          Note that the ADC is "bipolar", which means the GND (0V) level is mid-scale.
+    154           *          Note2: This function assumes that ADCCON3 contains the voltage reference.
+    155           **************************************************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    156          uint16 HalAdcRead (uint8 channel, uint8 resolution)
+   \                     HalAdcRead:
+    157          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 1
+   \   000005   74FF         MOV     A,#-0x1
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+   \   00000A   E9           MOV     A,R1
+   \   00000B   FC           MOV     R4,A
+   \   00000C   EA           MOV     A,R2
+   \   00000D   FD           MOV     R5,A
+    158            int16  reading = 0;
+    159          
+    160          #if (HAL_ADC == TRUE)
+    161          
+    162            uint8   i, resbits;
+    163            uint8   adctemp;
+    164            volatile  uint8 tmp;
+    165            uint8  adcChannel = 1;
+   \   00000E   7901         MOV     R1,#0x1
+    166            uint8  reference;
+    167          
+    168            /* store the previously set reference voltage selection */
+    169            reference = ADCCON3 & HAL_ADC_REF_BITS;
+   \   000010   E5B6         MOV     A,0xb6
+   \   000012   54C0         ANL     A,#0xc0
+   \   000014   FA           MOV     R2,A
+    170          
+    171            /*
+    172            * If Analog input channel is AIN0..AIN7, make sure corresponing P0 I/O pin is enabled.  The code
+    173            * does NOT disable the pin at the end of this function.  I think it is better to leave the pin
+    174            * enabled because the results will be more accurate.  Because of the inherent capacitance on the
+    175            * pin, it takes time for the voltage on the pin to charge up to its steady-state level.  If
+    176            * HalAdcRead() has to turn on the pin for every conversion, the results may show a lower voltage
+    177            * than actuality because the pin did not have time to fully charge.
+    178            */
+    179            if (channel < 8)
+   \   000015   EC           MOV     A,R4
+   \   000016   C3           CLR     C
+   \   000017   9408         SUBB    A,#0x8
+   \   000019   500E         JNC     ??HalAdcRead_0
+    180            {
+    181              for (i=0; i < channel; i++)
+   \   00001B   7800         MOV     R0,#0x0
+   \   00001D   8005         SJMP    ??HalAdcRead_1
+    182              {
+    183                adcChannel <<= 1;
+   \                     ??HalAdcRead_2:
+   \   00001F   E9           MOV     A,R1
+   \   000020   C3           CLR     C
+   \   000021   33           RLC     A
+   \   000022   F9           MOV     R1,A
+    184              }
+   \   000023   08           INC     R0
+   \                     ??HalAdcRead_1:
+   \   000024   E8           MOV     A,R0
+   \   000025   C3           CLR     C
+   \   000026   9C           SUBB    A,R4
+   \   000027   40F6         JC      ??HalAdcRead_2
+    185            }
+    186          
+    187            /* Enable channel */
+    188            ADCCFG |= adcChannel;
+   \                     ??HalAdcRead_0:
+   \   000029   E9           MOV     A,R1
+   \   00002A   42F2         ORL     0xf2,A
+    189          
+    190            /* Convert resolution to decimation rate */
+    191            switch (resolution)
+   \   00002C   ED           MOV     A,R5
+   \   00002D   14           DEC     A
+   \   00002E   6008         JZ      ??HalAdcRead_3
+   \   000030   14           DEC     A
+   \   000031   6009         JZ      ??HalAdcRead_4
+   \   000033   14           DEC     A
+   \   000034   600A         JZ      ??HalAdcRead_5
+   \   000036   800C         SJMP    ??HalAdcRead_6
+    192            {
+    193              case HAL_ADC_RESOLUTION_8:
+    194                resbits = HAL_ADC_DEC_064;
+   \                     ??HalAdcRead_3:
+   \   000038   7800         MOV     R0,#0x0
+    195                break;
+   \   00003A   800A         SJMP    ??HalAdcRead_7
+    196              case HAL_ADC_RESOLUTION_10:
+    197                resbits = HAL_ADC_DEC_128;
+   \                     ??HalAdcRead_4:
+   \   00003C   7810         MOV     R0,#0x10
+    198                break;
+   \   00003E   8006         SJMP    ??HalAdcRead_7
+    199              case HAL_ADC_RESOLUTION_12:
+    200                resbits = HAL_ADC_DEC_256;
+   \                     ??HalAdcRead_5:
+   \   000040   7820         MOV     R0,#0x20
+    201                break;
+   \   000042   8002         SJMP    ??HalAdcRead_7
+    202              case HAL_ADC_RESOLUTION_14:
+    203              default:
+    204                resbits = HAL_ADC_DEC_512;
+   \                     ??HalAdcRead_6:
+   \   000044   7830         MOV     R0,#0x30
+    205                break;
+    206            }
+    207          
+    208            /* read ADCL,ADCH to clear EOC */
+    209            tmp = ADCL;
+   \                     ??HalAdcRead_7:
+   \   000046   12....       LCALL   ?Subroutine2 & 0xFFFF
+    210            tmp = ADCH;
+    211          
+    212            /* Setup Sample */
+    213            adctemp = ADCCON3;
+   \                     ??CrossCallReturnLabel_1:
+   \   000049   E5B6         MOV     A,0xb6
+    214            adctemp &= ~(HAL_ADC_CHN_BITS | HAL_ADC_DEC_BITS | HAL_ADC_REF_BITS);
+    215            adctemp |= channel | resbits | (reference);
+    216          
+    217            /* writing to this register starts the extra conversion */
+    218            ADCCON3 = adctemp;
+   \   00004B   EC           MOV     A,R4
+   \   00004C   48           ORL     A,R0
+   \   00004D   4A           ORL     A,R2
+   \   00004E   F5B6         MOV     0xb6,A
+    219          
+    220            /* Wait for the conversion to be done */
+    221            while (!(ADCCON1 & HAL_ADC_EOC));
+   \                     ??HalAdcRead_8:
+   \   000050   E5B4         MOV     A,0xb4
+   \   000052   A2E7         MOV     C,0xE0 /* A   */.7
+   \   000054   50FA         JNC     ??HalAdcRead_8
+    222          
+    223            /* Disable channel after done conversion */
+    224            ADCCFG &= (adcChannel ^ 0xFF);
+   \   000056   74FF         MOV     A,#-0x1
+   \   000058   69           XRL     A,R1
+   \   000059   52F2         ANL     0xf2,A
+    225          
+    226            /* Read the result */
+    227            reading = (int16) (ADCL);
+   \   00005B   E5BA         MOV     A,0xba
+   \   00005D   F5..         MOV     ?V0 + 0,A
+    228            reading |= (int16) (ADCH << 8);
+   \   00005F   E5BB         MOV     A,0xbb
+   \   000061   AA..         MOV     R2,?V0 + 0
+   \   000063   FB           MOV     R3,A
+    229          
+    230            /* Treat small negative as 0 */
+    231            if (reading < 0)
+   \   000064   C3           CLR     C
+   \   000065   9400         SUBB    A,#0x0
+   \   000067   A2D2         MOV     C,0xD0 /* PSW */.2
+   \   000069   65D0         XRL     A,PSW
+   \   00006B   33           RLC     A
+   \   00006C   5004         JNC     ??HalAdcRead_9
+    232              reading = 0;
+   \   00006E   7A00         MOV     R2,#0x0
+   \   000070   7B00         MOV     R3,#0x0
+    233          
+    234            switch (resolution)
+   \                     ??HalAdcRead_9:
+   \   000072   ED           MOV     A,R5
+   \   000073   14           DEC     A
+   \   000074   6008         JZ      ??HalAdcRead_10
+   \   000076   14           DEC     A
+   \   000077   600D         JZ      ??HalAdcRead_11
+   \   000079   14           DEC     A
+   \   00007A   6012         JZ      ??HalAdcRead_12
+   \   00007C   8018         SJMP    ??HalAdcRead_13
+    235            {
+    236              case HAL_ADC_RESOLUTION_8:
+    237                reading >>= 8;
+   \                     ??HalAdcRead_10:
+   \   00007E   8A..         MOV     ?V0 + 0,R2
+   \   000080   8B..         MOV     ?V0 + 1,R3
+   \   000082   7408         MOV     A,#0x8
+   \   000084   8016         SJMP    ??HalAdcRead_14
+    238                break;
+    239              case HAL_ADC_RESOLUTION_10:
+    240                reading >>= 6;
+   \                     ??HalAdcRead_11:
+   \   000086   8A..         MOV     ?V0 + 0,R2
+   \   000088   8B..         MOV     ?V0 + 1,R3
+   \   00008A   7406         MOV     A,#0x6
+   \   00008C   800E         SJMP    ??HalAdcRead_14
+    241                break;
+    242              case HAL_ADC_RESOLUTION_12:
+    243                reading >>= 4;
+   \                     ??HalAdcRead_12:
+   \   00008E   8A..         MOV     ?V0 + 0,R2
+   \   000090   8B..         MOV     ?V0 + 1,R3
+   \   000092   7404         MOV     A,#0x4
+   \   000094   8006         SJMP    ??HalAdcRead_14
+    244                break;
+    245              case HAL_ADC_RESOLUTION_14:
+    246              default:
+    247                reading >>= 2;
+   \                     ??HalAdcRead_13:
+   \   000096   8A..         MOV     ?V0 + 0,R2
+   \   000098   8B..         MOV     ?V0 + 1,R3
+   \   00009A   7402         MOV     A,#0x2
+   \                     ??HalAdcRead_14:
+   \   00009C   78..         MOV     R0,#?V0 + 0
+   \   00009E   12....       LCALL   ?SS_SHR
+   \   0000A1   AA..         MOV     R2,?V0 + 0
+   \   0000A3   AB..         MOV     R3,?V0 + 1
+    248              break;
+    249            }
+    250          #else
+    251            // unused arguments
+    252            (void) channel;
+    253            (void) resolution;
+    254          #endif
+    255          
+    256            return ((uint16)reading);
+   \   0000A5   04           INC     A
+   \   0000A6   12....       LCALL   ?DEALLOC_XSTACK8
+   \   0000A9                REQUIRE ?Subroutine1
+   \   0000A9                REQUIRE ADCCON3
+   \   0000A9                REQUIRE ADCCFG
+   \   0000A9                REQUIRE ADCL
+   \   0000A9                REQUIRE ADCH
+   \   0000A9                REQUIRE ADCCON1
+   \   0000A9                ; // Fall through to label ?Subroutine1
+    257          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   7F02         MOV     R7,#0x2
+   \   000002   02....       LJMP    ?BANKED_LEAVE_XDATA
+    258          
+    259          /**************************************************************************************************
+    260           * @fn      HalAdcSetReference
+    261           *
+    262           * @brief   Sets the reference voltage for the ADC and initializes the service
+    263           *
+    264           * @param   reference - the reference voltage to be used by the ADC
+    265           *
+    266           * @return  none
+    267           *
+    268           **************************************************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    269          void HalAdcSetReference ( uint8 reference )
+   \                     HalAdcSetReference:
+    270          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 1
+   \   000004   74FF         MOV     A,#-0x1
+   \   000006   12....       LCALL   ?ALLOC_XSTACK8
+    271          #if (HAL_ADC == TRUE)
+    272            volatile uint8 tmp;
+    273          
+    274            ADCCON1 = HAL_ADC_STSEL | HAL_ADC_RAND_GEN | 0x03;
+   \   000009   75B43F       MOV     0xb4,#0x3f
+    275            ADCCON2 = (reference) | HAL_ADC_DEC_RATE | HAL_ADC_SCHN;
+   \   00000C   740F         MOV     A,#0xf
+   \   00000E   49           ORL     A,R1
+   \   00000F   F5B5         MOV     0xb5,A
+    276            /*
+    277            *  After reset, the first ADC reading of the extra conversion always reads GND level.
+    278            *  We will do a few dummy conversions to bypass this bug.
+    279            */
+    280            tmp = ADCL;     /* read ADCL,ADCH to clear EOC */
+   \   000011   12....       LCALL   ?Subroutine2 & 0xFFFF
+    281            tmp = ADCH;
+    282            ADCCON3 = (reference) | HAL_ADC_DEC_RATE | HAL_ADC_ECHN;
+   \                     ??CrossCallReturnLabel_2:
+   \   000014   740C         MOV     A,#0xc
+   \   000016   49           ORL     A,R1
+   \   000017   F8           MOV     R0,A
+   \   000018   88B6         MOV     0xb6,R0
+    283            while ((ADCCON1 & HAL_ADC_EOC) != HAL_ADC_EOC);   /* Wait for conversion */
+   \                     ??HalAdcSetReference_0:
+   \   00001A   E5B4         MOV     A,0xb4
+   \   00001C   A2E7         MOV     C,0xE0 /* A   */.7
+   \   00001E   50FA         JNC     ??HalAdcSetReference_0
+    284            tmp = ADCL;     /* read ADCL,ADCH to clear EOC */
+   \   000020   E5BA         MOV     A,0xba
+   \   000022   12....       LCALL   ??Subroutine3_0 & 0xFFFF
+    285            tmp = ADCH;
+    286            ADCCON3 = (reference) | HAL_ADC_DEC_RATE | HAL_ADC_ECHN;
+   \                     ??CrossCallReturnLabel_5:
+   \   000025   88B6         MOV     0xb6,R0
+    287            while ((ADCCON1 & HAL_ADC_EOC) != HAL_ADC_EOC);   /* Wait for conversion */
+   \                     ??HalAdcSetReference_1:
+   \   000027   E5B4         MOV     A,0xb4
+   \   000029   A2E7         MOV     C,0xE0 /* A   */.7
+   \   00002B   50FA         JNC     ??HalAdcSetReference_1
+    288            tmp = ADCL;     /* read ADCL,ADCH to clear EOC */
+   \   00002D   02....       LJMP    ?Subroutine0 & 0xFFFF
+   \   000030                REQUIRE ADCCON1
+   \   000030                REQUIRE ADCCON2
+   \   000030                REQUIRE ADCL
+   \   000030                REQUIRE ADCH
+   \   000030                REQUIRE ADCCON3
+    289            tmp = ADCH;
+    290          #endif
+    291          }
+    292          
+    293          /**************************************************************************************************
+    294           * @fn      HalAdcCheckVdd
+    295           *
+    296           * @brief   Check the Vdd and return TRUE if it greater than or equal the limit
+    297           *
+    298           * @param   limit - limit that needs to be checked with the Vdd
+    299           *
+    300           * @return  TRUE if Vdd >= limit, FALSE otherwise
+    301           *
+    302           **************************************************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    303          bool HalAdcCheckVdd (uint8 limit)
+   \                     HalAdcCheckVdd:
+    304          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV     A,R1
+   \   000006   FC           MOV     R4,A
+    305            uint16 value;
+    306            uint8 tmpADCCON3 = ADCCON3;  // Save ADCCON3 to restore later
+   \   000007   E5B6         MOV     A,0xb6
+   \   000009   F8           MOV     R0,A
+    307          
+    308            /* Clear ADC interrupt flag */
+    309            ADCIF = 0;
+   \   00000A   C28D         CLR     0x88.5
+    310          
+    311            /* Setup the new value for conversion */
+    312            ADCCON3 = (HAL_ADC_REF_125V | HAL_ADC_DEC_064 | HAL_ADC_CHN_VDD3);
+   \   00000C   75B60F       MOV     0xb6,#0xf
+    313          
+    314            /* Wait for the conversion to finish */
+    315            while ( !ADCIF );
+   \                     ??HalAdcCheckVdd_0:
+   \   00000F   A28D         MOV     C,0x88.5
+   \   000011   50FC         JNC     ??HalAdcCheckVdd_0
+    316          
+    317            /* Get the result */
+    318            value = ADCL;
+   \   000013   E5BA         MOV     A,0xba
+   \   000015   F5..         MOV     ?V0 + 0,A
+    319            value |= ((uint16) ADCH) << 8;
+   \   000017   E5BB         MOV     A,0xbb
+    320          
+    321            // Restore ADCCON3
+    322            ADCCON3 = tmpADCCON3;
+   \   000019   88B6         MOV     0xb6,R0
+    323            
+    324            /* Check the limit and return */
+    325            return ( value >= HalAdcVddLimit[limit] );
+   \   00001B   FB           MOV     R3,A
+   \   00001C   EC           MOV     A,R4
+   \   00001D   C3           CLR     C
+   \   00001E   33           RLC     A
+   \   00001F   F8           MOV     R0,A
+   \   000020   E4           CLR     A
+   \   000021   33           RLC     A
+   \   000022   F9           MOV     R1,A
+   \   000023   74..         MOV     A,#HalAdcVddLimit & 0xff
+   \   000025   28           ADD     A,R0
+   \   000026   F582         MOV     DPL,A
+   \   000028   74..         MOV     A,#(HalAdcVddLimit >> 8) & 0xff
+   \   00002A   39           ADDC    A,R1
+   \   00002B   F583         MOV     DPH,A
+   \   00002D   E4           CLR     A
+   \   00002E   93           MOVC    A,@A+DPTR
+   \   00002F   F8           MOV     R0,A
+   \   000030   7401         MOV     A,#0x1
+   \   000032   93           MOVC    A,@A+DPTR
+   \   000033   F9           MOV     R1,A
+   \   000034   C3           CLR     C
+   \   000035   E5..         MOV     A,?V0 + 0
+   \   000037   98           SUBB    A,R0
+   \   000038   EB           MOV     A,R3
+   \   000039   99           SUBB    A,R1
+   \   00003A   4004         JC      ??HalAdcCheckVdd_1
+   \   00003C   7901         MOV     R1,#0x1
+   \   00003E   8002         SJMP    ??HalAdcCheckVdd_2
+   \                     ??HalAdcCheckVdd_1:
+   \   000040   7900         MOV     R1,#0x0
+   \                     ??HalAdcCheckVdd_2:
+   \   000042   02....       LJMP    ?Subroutine1 & 0xFFFF
+   \   000045                REQUIRE ADCCON3
+   \   000045                REQUIRE _A_TCON
+   \   000045                REQUIRE ADCL
+   \   000045                REQUIRE ADCH
+    326          }
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??HalAdcInit?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    HalAdcInit
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??HalAdcRead?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    HalAdcRead
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??HalAdcSetReference?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    HalAdcSetReference
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??HalAdcCheckVdd?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    HalAdcCheckVdd
+    327          
+    328          /**************************************************************************************************
+    329          **************************************************************************************************/
+
+   Maximum stack usage in bytes:
+
+     Function           ISTACK PSTACK XSTACK
+     --------           ------ ------ ------
+     HalAdcCheckVdd         0      0     10
+     HalAdcInit             3      0      1
+     HalAdcRead             1      0     11
+     HalAdcSetReference     3      0      1
+
+
+   Segment part sizes:
+
+     Function/Label             Bytes
+     --------------             -----
+     _A_TCON                       1
+     ADCCON1                       1
+     ADCCON2                       1
+     ADCCON3                       1
+     ADCL                          1
+     ADCH                          1
+     ADCCFG                        1
+     HalAdcVddLimit               18
+     HalAdcInit                   41
+     ?Subroutine0                 17
+     ?Subroutine2                  8
+     ??Subroutine3_0               5
+     HalAdcRead                  169
+     ?Subroutine1                  5
+     HalAdcSetReference           48
+     HalAdcCheckVdd               69
+     ??HalAdcInit?relay            6
+     ??HalAdcRead?relay            6
+     ??HalAdcSetReference?relay    6
+     ??HalAdcCheckVdd?relay        6
+
+ 
+ 362 bytes in segment BANKED_CODE
+  24 bytes in segment BANK_RELAYS
+  18 bytes in segment CODE_C
+   7 bytes in segment SFR_AN
+ 
+ 404 bytes of CODE memory
+   0 bytes of DATA memory (+ 7 bytes shared)
+
+Errors: none
+Warnings: none

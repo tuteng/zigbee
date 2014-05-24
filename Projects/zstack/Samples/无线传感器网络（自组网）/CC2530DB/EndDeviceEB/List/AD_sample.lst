@@ -1,0 +1,475 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         03/May/2014  11:11:17 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\S #
+#                          ource\AD_sample.c                                  #
+#    Command line       =  -f H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä #
+#                          £©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£ #
+#                          ©\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg    #
+#                          (-DCPU32MHZ -DROOT=__near_func -DBLINK_LEDS) -f    #
+#                          H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg      #
+#                          (-DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR      #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFF0                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\S #
+#                          ource\AD_sample.c -D NWK_AUTO_POLL -D ZTOOL_P1 -D  #
+#                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D           #
+#                          LCD_SUPPORTED=DEBUG -lC H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷Í #
+#                          øÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\Projects\zstack\Samples\ÎÞ #
+#                          Ïß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\CC2530DB\EndDeviceEB\List\  #
+#                          -lA H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Ê #
+#                          ä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø #
+#                          £©\CC2530DB\EndDeviceEB\List\ --diag_suppress      #
+#                          Pe001,Pa010 -o H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×é #
+#                          ÍøÓëÊý¾Ý´«Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷Í #
+#                          øÂç£¨×Ô×éÍø£©\CC2530DB\EndDeviceEB\Obj\ -e         #
+#                          --debug --core=plain --dptr=16,1                   #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä #
+#                          £©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£ #
+#                          ©\CC2530DB\ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×é #
+#                          ÍøÓëÊý¾Ý´«Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷Í #
+#                          øÂç£¨×Ô×éÍø£©\CC2530DB\..\SOURCE\ -I               #
+#                          H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\..\..\..\ZMAIN\TI2530DB\ -I                #
+#                          H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\MT\ -I           #
+#                          H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\HAL\INCLUDE\ -I  #
+#                          H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\HAL\TARGET\CC253 #
+#                          0EB\ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾ #
+#                          Ý´«Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô #
+#                          ×éÍø£©\CC2530DB\..\..\..\..\..\COMPONENTS\OSAL\MCU #
+#                          \CCSOC\ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓë #
+#                          Êý¾Ý´«Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£ #
+#                          ¨×Ô×éÍø£©\CC2530DB\..\..\..\..\..\COMPONENTS\OSAL\ #
+#                          INCLUDE\ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓ #
+#                          ëÊý¾Ý´«Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç #
+#                          £¨×Ô×éÍø£©\CC2530DB\..\..\..\..\..\COMPONENTS\STAC #
+#                          K\AF\ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý #
+#                          ¾Ý´«Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨× #
+#                          Ô×éÍø£©\CC2530DB\..\..\..\..\..\COMPONENTS\STACK\N #
+#                          WK\ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý #
+#                          ´«Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô× #
+#                          éÍø£©\CC2530DB\..\..\..\..\..\COMPONENTS\STACK\SEC #
+#                          \ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´« #
+#                          Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍ #
+#                          ø£©\CC2530DB\..\..\..\..\..\COMPONENTS\STACK\SAPI\ #
+#                           -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Ê #
+#                          ä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø #
+#                          £©\CC2530DB\..\..\..\..\..\COMPONENTS\STACK\SYS\   #
+#                          -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä #
+#                          £©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£ #
+#                          ©\CC2530DB\..\..\..\..\..\COMPONENTS\STACK\ZDO\    #
+#                          -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä #
+#                          £©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£ #
+#                          ©\CC2530DB\..\..\..\..\..\COMPONENTS\ZMAC\F8W\ -I  #
+#                          H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\ZMAC\ -I         #
+#                          H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\SERVICES\SADDR\  #
+#                          -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä #
+#                          £©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£ #
+#                          ©\CC2530DB\..\..\..\..\..\COMPONENTS\SERVICES\SDAT #
+#                          A\ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´ #
+#                          «Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×é #
+#                          Íø£©\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\INCLUD #
+#                          E\ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´ #
+#                          «Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×é #
+#                          Íø£©\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\HIGH_L #
+#                          EVEL\ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý #
+#                          ¾Ý´«Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨× #
+#                          Ô×éÍø£©\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\LOW #
+#                          _LEVEL\srf04\ -I H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô #
+#                          ×éÍøÓëÊý¾Ý´«Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ #
+#                          ÷ÍøÂç£¨×Ô×éÍø£©\CC2530DB\..\..\..\..\..\COMPONENTS #
+#                          \MAC\LOW_LEVEL\srf04\SINGLE_CHIP\ -Ohz             #
+#    List file          =  H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\EndDeviceEB\List\AD_sample.lst             #
+#    Object file        =  H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\ #
+#                          Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\C #
+#                          C2530DB\EndDeviceEB\Obj\AD_sample.r51              #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+H:\zigbeesrc\8.ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍøÓëÊý¾Ý´«Êä£©\Projects\zstack\Samples\ÎÞÏß´«¸ÐÆ÷ÍøÂç£¨×Ô×éÍø£©\Source\AD_sample.c
+      1          /********************************************************************************/
+      2          //---------------------------DS18B20 ÄÚ²¿IDÏÔÊ¾ÓëÎÂ¶È²ÉÑù----------------------------------//
+      3          /*                              Creat By ES                                    */
+      4          /*                      http://es-tech.taobao.com                        */
+      5          /*******************************************************************************
+      6          
+      7          ÊµÑé²Ù×÷£º
+      8          DS18B20 VCCÒý½Å½ÓCC2530Ä£¿éµÄVDDÒý½Å£¬GNDÒý½Å½ÓCC2530Ä£¿éµÄGNDÒý½Å£¬Êý¾ÝÒý½Å½ÓP11Òý½Å¡£
+      9          Ä£¿éÃ¿Ãë²ÉÑùÒ»´ÎDS18B20 µÄÎÂ¶ÈÖµ£¬²¢ÏÔÊ¾ÔÚÒº¾§ÉÏ£¬Ã»²ÉÑùÒ»´Î£¬ledµÆÉÁË¸Ò»ÏÂ
+     10          
+     11          ×¢Òâ£ºÐèÒªÔÚ±¾µêÆÌ¹ºÂòJLX12864Òº¾§Ä£¿é
+     12          ***********************************************************************************/
+     13          // INCLUDES
+     14          //
+     15          //#include <hal_assert.h>
+     16          //#include <hal_board.h>
+     17          //#include <hal_int.h>
+     18          //#include "hal_mcu.h"
+     19          //#include "hal_rf.h"
+     20          //#include "basic_rf.h"
+     21          #include "DS18B20.h"
+
+   \                                 In  segment SFR_AN, at 0x8a
+   \   unsigned char volatile __sfr P1IFG
+   \                     P1IFG:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x8c
+   \   unsigned char volatile __sfr PICTL
+   \                     PICTL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x8d
+   \   unsigned char volatile __sfr P1IEN
+   \                     P1IEN:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x90
+   \   union <unnamed> volatile __sfr _A_P1
+   \                     _A_P1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x9a
+   \   unsigned char volatile __sfr IEN2
+   \                     IEN2:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xa8
+   \   union <unnamed> volatile __sfr _A_IEN0
+   \                     _A_IEN0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfd
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfe
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+     22          //#include "JLX12864.h"
+     23          
+     24          /***********************************************************************************
+     25          * CONSTANTS
+     26          */
+     27          // Application parameters
+     28          //#define RF_CHANNEL                25      // 2.4 GHz RF channel
+     29          
+     30          // BasicRF address definitions
+     31          //#define PAN_ID                0x2007
+     32          //#define ADDR                  0xBEEF
+     33          //#define APP_PAYLOAD_LENGTH        100
+     34          
+     35          //#define DISABLE_ALL_INTERRUPTS() (IEN0 = IEN1 = IEN2 = 0x00)//Èý¸ö
+     36          
+     37          //static basicRfCfg_t basicRfConfig;
+     38          //uint8 temp=0;
+     39          //uint8 data_count=0;
+     40          //uint16 temp_ini=0;
+     41          
+     42          
+     43          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     44          unsigned int  M_wendu=0;
+   \                     M_wendu:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     45          float temperture=0;
+   \                     temperture:
+   \   000000                DS 4
+   \   000004                REQUIRE __INIT_XDATA_Z
+     46          
+     47          
+     48          /**************************
+     49          ÏµÍ³Ê±ÖÓ ²»·ÖÆµ
+     50          ¼ÆÊýÊ±ÖÓ 32·ÖÆµ
+     51          **************************/
+     52          /*
+     53          void InitClock(void)
+     54          {   
+     55              CLKCONCMD &= ~0x40; // ÉèÖÃÏµÍ³Ê±ÖÓÔ´Îª 32MHZ¾§Õñ
+     56              while(CLKCONSTA & 0x40);                     // µÈ´ý¾§ÕñÎÈ¶¨ 
+     57              CLKCONCMD &= ~0x47;                          // ÉèÖÃÏµÍ³Ö÷Ê±ÖÓÆµÂÊÎª 32MHZ
+     58          }
+     59          */
+     60          /**************************
+     61          ¶ÁÈ¡ÎÂ¶Èº¯Êý
+     62          **************************/ 
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     63          void IO_initial()
+   \                     IO_initial:
+     64          { 
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     65            P0DIR |= 0xff;     //P0 ÎªÊä³ö
+   \   000000   75FDFF       MOV     0xfd,#-0x1
+     66            P1DIR |= 0xff;     //P1 ÎªÊä³ö  
+   \   000003   75FEFF       MOV     0xfe,#-0x1
+     67          //  P1SEL &= 0xfd;
+     68            P1=0x0f;
+   \   000006   75900F       MOV     0x90,#0xf
+     69            
+     70            P1IEN |= 0X02;  // P11 ÉèÖÃÎªÖÐ¶Ï·½Ê½ 
+   \   000009   438D02       ORL     0x8d,#0x2
+     71            PICTL &=~ 0X02; // ÏÂ½µÑØ´¥·¢   
+   \   00000C   538CFD       ANL     0x8c,#0xfd
+     72            IEN2 |= 0Xff;   // ÔÊÐíP1¿ÚÖÐ¶Ï;
+   \   00000F   759AFF       MOV     0x9a,#-0x1
+     73            P1   |= 0X0f;
+   \   000012   43900F       ORL     0x90,#0xf
+     74            P1IFG = 0x00;   // ³õÊ¼»¯ÖÐ¶Ï±êÖ¾Î»
+   \   000015   758A00       MOV     0x8a,#0x0
+     75            EA = 1; 
+   \   000018   D2AF         SETB    0xa8.7
+     76          }
+   \   00001A   02....       LJMP    ?BRET
+   \   00001D                REQUIRE P0DIR
+   \   00001D                REQUIRE P1DIR
+   \   00001D                REQUIRE _A_P1
+   \   00001D                REQUIRE P1IEN
+   \   00001D                REQUIRE PICTL
+   \   00001D                REQUIRE IEN2
+   \   00001D                REQUIRE P1IFG
+   \   00001D                REQUIRE _A_IEN0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     77          unsigned int read_data(unsigned char *buffer)
+   \                     read_data:
+     78          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+     79            unsigned char temh,teml; 
+     80            unsigned int wendu;
+     81            
+     82            init_1820();  //¸´Î»18b20  
+   \   000005                ; Setup parameters for call to function init_1820
+   \   000005   12....       LCALL   ?Subroutine0 & 0xFFFF
+     83          //  Match_DS18B20(temp) ; // 
+     84            write_1820(0xcc); 
+     85            write_1820(0x44); 
+   \                     ??CrossCallReturnLabel_0:
+   \   000008                ; Setup parameters for call to function write_1820
+   \   000008   7944         MOV     R1,#0x44
+   \   00000A   12....       LCALL   ??write_1820?relay
+     86            Delay_nus(50000);
+   \   00000D                ; Setup parameters for call to function Delay_nus
+   \   00000D   7A50         MOV     R2,#0x50
+   \   00000F   7BC3         MOV     R3,#-0x3d
+   \   000011   12....       LCALL   ??Delay_nus?relay
+     87            init_1820();  
+   \   000014                ; Setup parameters for call to function init_1820
+   \   000014   12....       LCALL   ?Subroutine0 & 0xFFFF
+     88            write_1820(0xcc);  
+     89            write_1820(0xbe); 
+   \                     ??CrossCallReturnLabel_1:
+   \   000017                ; Setup parameters for call to function write_1820
+   \   000017   79BE         MOV     R1,#-0x42
+   \   000019   12....       LCALL   ??write_1820?relay
+     90                 
+     91            teml=read_1820();  //¶ÁÊý¾Ý  
+   \   00001C                ; Setup parameters for call to function read_1820
+   \   00001C   12....       LCALL   ??read_1820?relay
+   \   00001F   E9           MOV     A,R1
+   \   000020   F5..         MOV     ?V0 + 0,A
+     92            temh=read_1820();
+     93            wendu=temh*256+teml;
+     94            return(wendu);   //·µ»ØÎÂ¶ÈÊý¾Ý
+   \   000022                ; Setup parameters for call to function read_1820
+   \   000022   12....       LCALL   ??read_1820?relay
+   \   000025   AA..         MOV     R2,?V0 + 0
+   \   000027   E9           MOV     A,R1
+   \   000028   FB           MOV     R3,A
+   \   000029   7F02         MOV     R7,#0x2
+   \   00002B   02....       LJMP    ?BANKED_LEAVE_XDATA
+     95          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   12....       LCALL   ??init_1820?relay
+   \   000003                ; Setup parameters for call to function write_1820
+   \   000003                ; Setup parameters for call to function write_1820
+   \   000003   79CC         MOV     R1,#-0x34
+   \   000005   12....       LCALL   ??write_1820?relay
+   \   000008   22           RET
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??IO_initial?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    IO_initial
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??read_data?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    read_data
+     96          
+     97          /*
+     98          void diaplay_id()
+     99          {
+    100            
+    101            LCD_disp_char(5,0,id[0]);LCD_disp_char(5,30,id[1]);LCD_disp_char(5,60,id[2]);LCD_disp_char(5,90,id[3]);
+    102            LCD_disp_char(6,0,id[4]);LCD_disp_char(6,30,id[5]);LCD_disp_char(6,60,id[6]);LCD_disp_char(6,90,id[7]);
+    103            
+    104          }
+    105          */
+    106          /*
+    107          
+    108          void main(void)
+    109          {
+    110              // Config basicRF
+    111              unsigned char i=0;
+    112              basicRfConfig.panId = PAN_ID;
+    113              basicRfConfig.channel = RF_CHANNEL;
+    114              basicRfConfig.ackRequest = TRUE;
+    115          
+    116              halBoardInit();
+    117              IO_initial();
+    118              initial_lcd();
+    119              clear_screen(); //clear all dots
+    120              LCD_write_english_string(1,1,"    Welcome to ES ");  //???????
+    121              LCD_write_english_string(2,1," es-tech.taobao.com");
+    122              LCD_write_english_string(4,1,"DS18B20 Address");
+    123              LCD_write_english_string(8,1,"Temperature:");
+    124          
+    125          
+    126              // Initalise hal_rf
+    127              if(halRfInit()==FAILED) {
+    128                HAL_ASSERT(FALSE);
+    129              }
+    130              
+    131              basicRfConfig.myAddr = ADDR; // Initialize BasicRF
+    132              if(basicRfInit(&basicRfConfig)==FAILED) {
+    133                HAL_ASSERT(FALSE);
+    134              }   
+    135                  
+    136              basicRfReceiveOff(); // Keep Receiver off when not needed to save power
+    137              
+    138              get_id();
+    139              diaplay_id();
+    140              
+    141              M_wendu= read_data(DS18B20_id);
+    142              halMcuWaitMs(1);  // ÑÓÊ±1ºÁÃë
+    143              temperture=(float)(M_wendu)*0.0625;  
+    144              
+    145              LCD_disp_Float(8,80, temperture,1); 
+    146              
+    147          
+    148              while(1){
+    149                
+    150                      Blue_LED=!Blue_LED;    //À¶É«LEDÁÁ£¬¿ªÊ¼²ÉÑù
+    151                      M_wendu= read_data(DS18B20_id);
+    152                      halMcuWaitMs(1);  // ÑÓÊ±1ºÁÃë
+    153                      temperture=(float)(M_wendu)*0.0625;     
+    154                      LCD_disp_Float(8,80, temperture,1); 
+    155           
+    156                      halMcuWaitMs(1000);  // ÑÓÊ±1000ºÁÃë
+    157              }
+    158          
+    159          }
+    160          */
+    161          
+    162          
+    163          
+    164          
+
+   Maximum stack usage in bytes:
+
+     Function        ISTACK PSTACK XSTACK
+     --------        ------ ------ ------
+     IO_initial          0      0      0
+     read_data           0      0     10
+       -> init_1820      0      0     20
+       -> write_1820     0      0     20
+       -> write_1820     0      0     20
+       -> Delay_nus      0      0     20
+       -> init_1820      0      0     20
+       -> write_1820     0      0     20
+       -> write_1820     0      0     20
+       -> read_1820      0      0     20
+       -> read_1820      0      0     20
+
+
+   Segment part sizes:
+
+     Function/Label     Bytes
+     --------------     -----
+     P1IFG                 1
+     PICTL                 1
+     P1IEN                 1
+     _A_P1                 1
+     IEN2                  1
+     _A_IEN0               1
+     P0DIR                 1
+     P1DIR                 1
+     M_wendu               2
+     temperture            4
+     IO_initial           29
+     read_data            46
+     ?Subroutine0          9
+     ??IO_initial?relay    6
+     ??read_data?relay     6
+
+ 
+ 84 bytes in segment BANKED_CODE
+ 12 bytes in segment BANK_RELAYS
+  8 bytes in segment SFR_AN
+  6 bytes in segment XDATA_Z
+ 
+ 96 bytes of CODE  memory
+  0 bytes of DATA  memory (+ 8 bytes shared)
+  6 bytes of XDATA memory
+
+Errors: none
+Warnings: none

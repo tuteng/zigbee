@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\znp.ewp</path>
+  </project>
+  <batchBuild>
+    <batchDefinition>
+      <name>Build All</name>
+      <member>
+        <project>znp</project>
+        <configuration>CC2530ZNP</configuration>
+      </member>
+      <member>
+        <project>znp</project>
+        <configuration>CC2531ZNP</configuration>
+      </member>
+    </batchDefinition>
+  </batchBuild>
+</workspace>
